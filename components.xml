@@ -1,0 +1,3215 @@
+<Packages>
+    <ApplicationName>Qt</ApplicationName>
+    <ApplicationVersion>1.0.0</ApplicationVersion>
+    <Package>
+        <Name>embedded</Name>
+        <Title>Qt for Embedded Linux</Title>
+        <Description>{external-link}='https://doc.qt.io/Boot2Qt/'</Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>4</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>embedded.tools</Dependencies>
+    </Package>
+    <Package>
+        <Name>embedded.b2qt.691</Name>
+        <Title>Boot to Qt Software Stack 6.9.1</Title>
+        <Description>Boot to Qt Software Stack 6.9.1</Description>
+        <SortingPriority>60901</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-202505292051</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>embedded.b2qt.691.doc</Dependencies>
+    </Package>
+    <Package>
+        <Name>embedded.b2qt.691.doc</Name>
+        <Title>Qt for Device Creation Documentation</Title>
+        <Description>Qt for Device Creation Documentation</Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-202505292051</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>4745627</Size>
+        <Dependencies>qt.tools.qtcreator,qt.qt6.691.doc_collection,qt.qt6.691.examples_collection</Dependencies>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>embedded.b2qt.691.raspberrypiarmv8</Name>
+        <Title>Raspberry Pi Development Boards (64bit)</Title>
+        <Description>Boot2Qt 6.9.1 for Raspberry Pi Development Boards (64bit).&lt;br>Based on Yocto 5.1.3 (styhead) release.</Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-20250530002050</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>embedded.tools,qt.qt6.691.doc_collection,qt.qt6.691.examples_collection</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>embedded.b2qt.691.raspberrypiarmv8.system</Name>
+        <Title>Raspberry Pi Development Boards (64bit) Linux System</Title>
+        <Description>System image for Raspberry Pi Development Boards (64bit) hardware</Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-20250530002050</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>803143804</Size>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>embedded.b2qt.691.raspberrypiarmv8.toolchain</Name>
+        <Title>Raspberry Pi Development Boards (64bit) Linux Toolchain</Title>
+        <Description>Toolchain and system root for Raspberry Pi Development Boards (64bit)</Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-20250530002050</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>2599765271</Size>
+        <Dependencies>qt.tools.qtcreator,mocwrapper</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>embedded.b2qt.flashingwizard</Name>
+        <Title>Boot To Qt Flashing Wizard</Title>
+        <Description>Host Utility to flash SD-card images from Qt Creator</Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>1.1.0-202412201319</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>19879012</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>embedded.b2qt.imagelicenses</Name>
+        <Title>Platform Image Licenses</Title>
+        <Description>Platform Image Licenses</Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>1.0.1</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>5953</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>embedded.b2qt.perfprofiler</Name>
+        <Title>PerfProfiler QtCreator plugin</Title>
+        <Description>PerfProfiler QtCreator plugin</Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>1.0.0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.tools.qtcreator</Dependencies>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>embedded.b2qt.qdb</Name>
+        <Title>QDB</Title>
+        <Description>QDB</Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>1.3.2-202502281441</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>7968296</Size>
+        <Dependencies>qt.tools.qtcreator</Dependencies>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>embedded.tools</Name>
+        <Title>Embedded tools</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>2</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.tools.cmake,embedded.b2qt.flashingwizard,embedded.b2qt.imagelicenses,embedded.b2qt.qdb,embedded.b2qt.perfprofiler</Dependencies>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>extensions.qtinsighttracker.691.doc</Name>
+        <Title>Documentation for Qt 6.9.1 Insight Tracker</Title>
+        <Description>Documentation for Qt 6.9.1 Insight Tracker</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291652</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>568903</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>extensions.qtinsighttracker.691.doc_collection</Name>
+        <Title>Documentation for Qt Insight Tracker</Title>
+        <Description>Documentation for Qt Insight Tracker</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291652</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>extensions.qtinsighttracker.691.doc</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>extensions.qtinsighttracker.691.examples</Name>
+        <Title>Examples for Qt 6.9.1 Insight Tracker</Title>
+        <Description>Examples for Qt 6.9.1 Insight Tracker</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291652</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>669430</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>extensions.qtinsighttracker.691.examples_collection</Name>
+        <Title>Examples for Qt Insight Tracker</Title>
+        <Description>Examples for Qt Insight Tracker</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291652</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>extensions.qtinsighttracker.691.examples</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>extensions.qtpdf.691.doc</Name>
+        <Title>Documentation for Qt PDF</Title>
+        <Description>Documentation for Qt PDF</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291652</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>2484868</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>extensions.qtpdf.691.doc_collection</Name>
+        <Title>Documentation for Qt PDF</Title>
+        <Description>Documentation for Qt PDF</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291652</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>extensions.qtpdf.691.doc</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>extensions.qtwebengine.691.doc</Name>
+        <Title>Documentation for QtWebEngine</Title>
+        <Description>Documentation for QtWebEngine</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291652</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>7798876</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>extensions.qtwebengine.691.doc_collection</Name>
+        <Title>Documentation for Qt WebEngine</Title>
+        <Description>Documentation for Qt WebEngine</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291652</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>extensions.qtwebengine.691.doc</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>extensions.qtwebengine.691.examples</Name>
+        <Title>Examples for QtWebEngine</Title>
+        <Description>Examples for QtWebEngine</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291652</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>1964282</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>extensions.qtwebengine.691.examples_collection</Name>
+        <Title>Examples for Qt WebEngine</Title>
+        <Description>Examples for Qt WebEngine</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291652</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>extensions.qtwebengine.691.examples</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>mocwrapper</Name>
+        <Title>mocwrapper 3.5.0</Title>
+        <Description>Qt mocwrapper component to enable license check for Qt Framework.</Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>3.5.0-202506050811</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>5063352</Size>
+        <Dependencies>tools.licenseservice</Dependencies>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt</Name>
+        <Title>Qt</Title>
+        <Description>Qt</Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>1.0.19</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+    </Package>
+    <Package>
+        <Name>qt.license.acceptance</Name>
+        <Title>Qt Frame Agreement acceptance</Title>
+        <Description>Additional License Agreement text and accept</Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>1.0.0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.license.enterprise</Name>
+        <Title>Qt Frame Agreement</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>2024.2-3</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.license.acceptance</Dependencies>
+        <ForcedInstallation>true</ForcedInstallation>
+        <Virtual>true</Virtual>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691</Name>
+        <Title>Qt 6.9.1</Title>
+        <Description>Qt 6.9.1 &lt;br>&lt;br>2025-05-29&lt;br>&lt;br> sha1: a99aafab4cfbbf650493c9a4feb5a1bb4a09d1d2</Description>
+        <SortingPriority>60901</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>2334</Size>
+        <Dependencies>qt.qt6.691.doc,qt.qt6.691.examples,qt.tools.qtcreator</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons</Name>
+        <Title>Additional Libraries</Title>
+        <Description>Additional Libraries for Qt 6.9.1.&lt;br>&lt;br>Most of the additional libraries are available under commercial licenses from The Qt Company, or under GPL v3. For open source use, please note the additional requirements compared to LGPL v3.</Description>
+        <SortingPriority>3</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtcharts</Name>
+        <Title>Qt Charts</Title>
+        <Description>The Qt Charts API lets you easily create interactive and dynamic 2D charts using C++ and/or Qt Quick.&lt;br>&lt;br>This component is available under commercial licenses from The Qt Company, or under GPL v3. For open source use, please note the additional requirements compared to LGPL v3.&lt;br>&lt;br></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtcharts,qt.qt6.691.examples.qtcharts</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtcharts.android_arm64_v8a</Name>
+        <Title>Qt Charts for Android ARM64-v8a</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>5210249</Size>
+        <Dependencies>qt.qt6.691.android_arm64_v8a</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtcharts,qt.qt6.691.android_arm64_v8a</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtcharts.android_armv7</Name>
+        <Title>Qt Charts for Android ARMv7</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>4243980</Size>
+        <Dependencies>qt.qt6.691.android_armv7</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtcharts,qt.qt6.691.android_armv7</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtcharts.android_x86</Name>
+        <Title>Qt Charts for Android x86</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>5289930</Size>
+        <Dependencies>qt.qt6.691.android_x86</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtcharts,qt.qt6.691.android_x86</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtcharts.android_x86_64</Name>
+        <Title>Qt Charts for Android x86_64</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>5267083</Size>
+        <Dependencies>qt.qt6.691.android_x86_64</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtcharts,qt.qt6.691.android_x86_64</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtcharts.clang_64</Name>
+        <Title>Qt Charts for macOS</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>7320481</Size>
+        <Dependencies>qt.qt6.691.clang_64</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtcharts,qt.qt6.691.clang_64</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtcharts.ios</Name>
+        <Title>Qt Charts for iOS</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>519747342</Size>
+        <Dependencies>qt.qt6.691.ios</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtcharts,qt.qt6.691.ios</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtmultimedia</Name>
+        <Title>Qt Multimedia</Title>
+        <Description>Qt Multimedia provides a rich set of QML types and C++ classes to handle multimedia content.</Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtmultimedia,qt.qt6.691.examples.qtmultimedia</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtmultimedia.android_arm64_v8a</Name>
+        <Title>Qt Multimedia for Android ARM64-v8a</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>106737943</Size>
+        <Dependencies>qt.qt6.691.android_arm64_v8a</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtmultimedia,qt.qt6.691.android_arm64_v8a</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtmultimedia.android_armv7</Name>
+        <Title>Qt Multimedia for Android ARMv7</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>84944766</Size>
+        <Dependencies>qt.qt6.691.android_armv7</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtmultimedia,qt.qt6.691.android_armv7</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtmultimedia.android_x86</Name>
+        <Title>Qt Multimedia for Android x86</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>87059803</Size>
+        <Dependencies>qt.qt6.691.android_x86</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtmultimedia,qt.qt6.691.android_x86</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtmultimedia.android_x86_64</Name>
+        <Title>Qt Multimedia for Android x86_64</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>106421928</Size>
+        <Dependencies>qt.qt6.691.android_x86_64</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtmultimedia,qt.qt6.691.android_x86_64</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtmultimedia.clang_64</Name>
+        <Title>Qt Multimedia for macOS</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>266449544</Size>
+        <Dependencies>qt.qt6.691.clang_64</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtmultimedia,qt.qt6.691.clang_64</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtmultimedia.ios</Name>
+        <Title>Qt Multimedia for iOS</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>597735530</Size>
+        <Dependencies>qt.qt6.691.ios</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtmultimedia,qt.qt6.691.ios</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtquick3d</Name>
+        <Title>Qt Quick 3D</Title>
+        <Description>Qt Quick 3D provides high-level 3D API for Qt Quick.&lt;br>&lt;br>This component is available under commercial licenses from The Qt Company, or under GPL v3. For open source use, please note the additional requirements compared to LGPL v3.</Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtquick3d,qt.qt6.691.examples.qtquick3d,qt.qt6.691.addons.qtshadertools,qt.qt6.691.addons.qtquicktimeline</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtquick3d.android_arm64_v8a</Name>
+        <Title>Qt Quick 3D for Android ARM64-v8a</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>30205688</Size>
+        <Dependencies>qt.qt6.691.android_arm64_v8a</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtquick3d,qt.qt6.691.android_arm64_v8a</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtquick3d.android_armv7</Name>
+        <Title>Qt Quick 3D for Android ARMv7</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>24068113</Size>
+        <Dependencies>qt.qt6.691.android_armv7</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtquick3d,qt.qt6.691.android_armv7</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtquick3d.android_x86</Name>
+        <Title>Qt Quick 3D for Android x86</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>27488593</Size>
+        <Dependencies>qt.qt6.691.android_x86</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtquick3d,qt.qt6.691.android_x86</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtquick3d.android_x86_64</Name>
+        <Title>Qt Quick 3D for Android x86_64</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>29864753</Size>
+        <Dependencies>qt.qt6.691.android_x86_64</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtquick3d,qt.qt6.691.android_x86_64</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtquick3d.clang_64</Name>
+        <Title>Qt Quick 3D for macOS</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>135487679</Size>
+        <Dependencies>qt.qt6.691.clang_64</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtquick3d,qt.qt6.691.clang_64</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtquick3d.ios</Name>
+        <Title>Qt Quick 3D for iOS</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>1661944757</Size>
+        <Dependencies>qt.qt6.691.ios</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtquick3d,qt.qt6.691.ios</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtquicktimeline</Name>
+        <Title>Qt Quick Timeline</Title>
+        <Description>The Qt Quick Timeline module enables keyframe-based animations and parameterization. It takes a tooling-friendly approach, and is therefore directly supported by Qt Design Studio and Qt Quick Designer that contain a timeline editor for creating keyframe based animations.&lt;br>&lt;br>This component is available under commercial licenses from The Qt Company, or under GPL v3. For open source use, please note the additional requirements compared to LGPL v3.</Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtquicktimeline</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtquicktimeline.android_arm64_v8a</Name>
+        <Title>Qt Quick Timeline for Android ARM64-v8a</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>472412</Size>
+        <Dependencies>qt.qt6.691.android_arm64_v8a</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtquicktimeline,qt.qt6.691.android_arm64_v8a</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtquicktimeline.android_armv7</Name>
+        <Title>Qt Quick Timeline for Android ARMv7</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>404792</Size>
+        <Dependencies>qt.qt6.691.android_armv7</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtquicktimeline,qt.qt6.691.android_armv7</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtquicktimeline.android_x86</Name>
+        <Title>Qt Quick Timeline for Android x86</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>464325</Size>
+        <Dependencies>qt.qt6.691.android_x86</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtquicktimeline,qt.qt6.691.android_x86</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtquicktimeline.android_x86_64</Name>
+        <Title>Qt Quick Timeline for Android x86_64</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>465254</Size>
+        <Dependencies>qt.qt6.691.android_x86_64</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtquicktimeline,qt.qt6.691.android_x86_64</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtquicktimeline.clang_64</Name>
+        <Title>Qt Quick Timeline for macOS</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>1194949</Size>
+        <Dependencies>qt.qt6.691.clang_64</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtquicktimeline,qt.qt6.691.clang_64</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtquicktimeline.ios</Name>
+        <Title>Qt Quick Timeline for iOS</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>59390145</Size>
+        <Dependencies>qt.qt6.691.ios</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtquicktimeline,qt.qt6.691.ios</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtshadertools</Name>
+        <Title>Qt Shader Tools</Title>
+        <Description>Qt Shader conditioning tool Prebuilt Components for Qt 6.9.1.</Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtshadertools</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtshadertools.android_arm64_v8a</Name>
+        <Title>Qt Shader Tools for Android ARM64-v8a</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>4310974</Size>
+        <Dependencies>qt.qt6.691.android_arm64_v8a</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtshadertools,qt.qt6.691.android_arm64_v8a</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtshadertools.android_armv7</Name>
+        <Title>Qt Shader Tools for Android ARMv7</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>3019582</Size>
+        <Dependencies>qt.qt6.691.android_armv7</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtshadertools,qt.qt6.691.android_armv7</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtshadertools.android_x86</Name>
+        <Title>Qt Shader Tools for Android x86</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>5410716</Size>
+        <Dependencies>qt.qt6.691.android_x86</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtshadertools,qt.qt6.691.android_x86</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtshadertools.android_x86_64</Name>
+        <Title>Qt Shader Tools for Android x86_64</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>4613522</Size>
+        <Dependencies>qt.qt6.691.android_x86_64</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtshadertools,qt.qt6.691.android_x86_64</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtshadertools.clang_64</Name>
+        <Title>Qt Shader Tools for macOS</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>10104985</Size>
+        <Dependencies>qt.qt6.691.clang_64</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtshadertools,qt.qt6.691.clang_64</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.addons.qtshadertools.ios</Name>
+        <Title>Qt Shader Tools for iOS</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>346635693</Size>
+        <Dependencies>qt.qt6.691.ios</Dependencies>
+        <AutoDependOn>qt.qt6.691.addons.qtshadertools,qt.qt6.691.ios</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.android</Name>
+        <Title>Android</Title>
+        <Description>Qt 6.9.1 Prebuilt Components for Android armv7, arm64-v8a, x86 and x86_64</Description>
+        <SortingPriority>270</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.tools.qtcreator,qt.qt6.691.doc,qt.qt6.691.examples,qt.qt6.691.android_arm64_v8a,qt.qt6.691.android_armv7,qt.qt6.691.android_x86,qt.qt6.691.android_x86_64</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.android_arm64_v8a</Name>
+        <Title>Android ARM64-v8a</Title>
+        <Description>Qt 6.9.1 Prebuilt Components for Android ARM64-v8a</Description>
+        <SortingPriority>250</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>380055249</Size>
+        <Dependencies>qt.tools.qtcreator,qt.qt6.691.doc,qt.qt6.691.examples,qt.qt6.691.patcher,qt.qt6.691.clang_64</Dependencies>
+        <AutoDependOn>qt.qt6.691.android</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.android_armv7</Name>
+        <Title>Android ARMv7</Title>
+        <Description>Qt 6.9.1 Prebuilt Components for Android ARMv7</Description>
+        <SortingPriority>250</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>319399795</Size>
+        <Dependencies>qt.tools.qtcreator,qt.qt6.691.doc,qt.qt6.691.examples,qt.qt6.691.patcher,qt.qt6.691.clang_64</Dependencies>
+        <AutoDependOn>qt.qt6.691.android</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.android_x86</Name>
+        <Title>Android x86</Title>
+        <Description>Qt 6.9.1 Prebuilt Components for Android x86</Description>
+        <SortingPriority>250</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>333619793</Size>
+        <Dependencies>qt.tools.qtcreator,qt.qt6.691.doc,qt.qt6.691.examples,qt.qt6.691.patcher,qt.qt6.691.clang_64</Dependencies>
+        <AutoDependOn>qt.qt6.691.android</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.android_x86_64</Name>
+        <Title>Android x86_64</Title>
+        <Description>Qt 6.9.1 Prebuilt Components for Android x86_64</Description>
+        <SortingPriority>250</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>384708164</Size>
+        <Dependencies>qt.tools.qtcreator,qt.qt6.691.doc,qt.qt6.691.examples,qt.qt6.691.patcher,qt.qt6.691.clang_64</Dependencies>
+        <AutoDependOn>qt.qt6.691.android</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.clang_64</Name>
+        <Title>Desktop</Title>
+        <Description>Qt 6.9.1 Prebuilt Components for macOS (Universal, x86_64/arm64)</Description>
+        <SortingPriority>700</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>1442806618</Size>
+        <Dependencies>qt.tools.qtcreator,qt.qt6.691.doc,qt.qt6.691.examples,mocwrapper</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc</Name>
+        <Title>Qt 6.9.1 Documentation</Title>
+        <Description>Qt 6.9.1 documentation</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>227097439</Size>
+        <Dependencies>qt.tools</Dependencies>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qt3d</Name>
+        <Title>Documentation for Qt 6.9.1 Qt 3D</Title>
+        <Description>Documentation for Qt 6.9.1 Qt 3D</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>20762788</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qt5compat</Name>
+        <Title>Documentation for Qt 6.9.1 Qt 5 Compatibility module</Title>
+        <Description>Documentation for Qt 6.9.1 Qt 5 Compatibility module</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>33875070</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtactiveqt</Name>
+        <Title>Documentation for Qt 6.9.1 Qt 3D</Title>
+        <Description>Documentation for Qt 6.9.1 Qt 3D</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>1335347</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtapplicationmanager</Name>
+        <Title>Documentation for Qt 6.9.1 Application Manager</Title>
+        <Description>Documentation for Qt 6.9.1 Application Manager</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>4145864</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtbluetooth</Name>
+        <Title>Documentation for Qt 6.9.1 GPLv3 components (QtConnectivity/Bluetooth)</Title>
+        <Description>Documentation for Qt 6.9.1 GPLv3 components (QtConnectivity/Bluetooth)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>3186624</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtcharts</Name>
+        <Title>Documentation for Qt 6.9.1 GPLv3 components (QtCharts)</Title>
+        <Description>Documentation for Qt 6.9.1 GPLv3 components (QtCharts)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>14855877</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtcoap</Name>
+        <Title>Documentation for Qt 6.9.1 Qt CoAP</Title>
+        <Description>Documentation for Qt 6.9.1 Qt CoAP</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>1173749</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtdatavis3d</Name>
+        <Title>Documentation for Qt 6.9.1 GPLv3 components (QtDataVisualization)</Title>
+        <Description>Documentation for Qt 6.9.1 GPLv3 components (QtDataVisualization)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>7385706</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtgraphs</Name>
+        <Title>Documentation for Qt 6.9.1 GPLv3 components (QtGraphs)</Title>
+        <Description>Documentation for Qt 6.9.1 GPLv3 components (QtGraphs)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>11484396</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtgrpc</Name>
+        <Title>Documentation for Qt 6.9.1 Qt Protobuf and Qt GRPC</Title>
+        <Description>Documentation for Qt 6.9.1 Qt Protobuf and Qt GRPC</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>2076770</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qthttpserver</Name>
+        <Title>Documentation for Qt 6.9.1 HTTP Server</Title>
+        <Description>Documentation for Qt 6.9.1 HTTP Server </Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>1232026</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtimageformats</Name>
+        <Title>Documentation for Qt 6.9.1 Imageformats</Title>
+        <Description>Documentation for Qt 6.9.1 Imageformats</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>140324</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtinterfaceframework</Name>
+        <Title>Documentation for Qt 6.9.1 Interface Framework</Title>
+        <Description>Documentation for Qt 6.9.1 Interface Framework</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>7866092</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtlanguageserver</Name>
+        <Title>Documentation for Qt 6.9.1 language Server</Title>
+        <Description>Documentation for Qt 6.9.1 language Server</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtlocation</Name>
+        <Title>Documentation for Qt 6.9.1 Location</Title>
+        <Description>Documentation for Qt 6.9.1 Location</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>7280391</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtlottie</Name>
+        <Title>Documentation for Qt 6.9.1 Lottie Animation</Title>
+        <Description>Documentation for Qt 6.9.1 Lottie Animation</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>193553</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtmqtt</Name>
+        <Title>Documentation for Qt 6.9.1 MQTT</Title>
+        <Description>Documentation for Qt 6.9.1 MQTT</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>1479577</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtmultimedia</Name>
+        <Title>Documentation for Qt Multimedia</Title>
+        <Description>Documentation for Qt Multimedia</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>10111755</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtnetworkauth</Name>
+        <Title>Documentation for Qt Networkauth (Technology Preview)</Title>
+        <Description>Documentation for Qt Networkauth (Technology Preview)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>1784920</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtnfc</Name>
+        <Title>Documentation for Qt 6.9.1 GPLv3 components (QtConnectivity/NFC)</Title>
+        <Description>Documentation for Qt 6.9.1 GPLv3 components (QtConnectivity/NFC)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>874396</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtopcua</Name>
+        <Title>Documentation for Qt 6.9.1 OPC UA</Title>
+        <Description>Documentation for Qt 6.9.1 OPC UA</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>29510161</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtpositioning</Name>
+        <Title>Documentation for Qt 6.9.1 GPLv3 components (QtPositioning)</Title>
+        <Description>Documentation for Qt 6.9.1 GPLv3 components (QtPositioning)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>2476705</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtquick3d</Name>
+        <Title>Documentation for Qt 6.9.1 GPLv3 components (QtQuick3D)</Title>
+        <Description>Documentation for Qt 6.9.1 GPLv3 components (QtQuick3D)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>60451031</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtquick3dphysics</Name>
+        <Title>Documentation for Qt 6.9.1 Quick: 3D Physics</Title>
+        <Description>Documentation for Qt 6.9.1 Quick: 3D Physics </Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>6200010</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtquickeffectmaker</Name>
+        <Title>Documentation for Qt 6.9.1 Quick Effect Maker</Title>
+        <Description>Documentation for Qt 6.9.1 Quick Effect Maker</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>1067016</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtquicktimeline</Name>
+        <Title>Documentation for Qt Quick Timeline</Title>
+        <Description>Documentation for Qt Quick Timeline</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>388812</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtremoteobjects</Name>
+        <Title>Documentation for Qt Remote Objects</Title>
+        <Description>Documentation for Qt Remote Objects</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>1545620</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtscxml</Name>
+        <Title>Documentation for Qt 6.9.1 SCXML</Title>
+        <Description>Documentation for Qt 6.9.1 SCXML</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>3091948</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtsensors</Name>
+        <Title>Documentation for Qt 6.9.1 Sensors</Title>
+        <Description>Documentation for Qt 6.9.1 Sensors</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>4304284</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtserialbus</Name>
+        <Title>Documentation for Qt 6.9.1 SerialBus</Title>
+        <Description>Documentation for Qt 6.9.1 SerialBus</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>2403430</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtserialport</Name>
+        <Title>Documentation for Qt 6.9.1 SerialPort</Title>
+        <Description>Documentation for Qt 6.9.1 SerialPort</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>564257</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtshadertools</Name>
+        <Title>Documentation for Qt 6.9.1 Qt Shader Tools</Title>
+        <Description>Documentation for Qt 6.9.1 Qt Shader Tools</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>495170</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtspeech</Name>
+        <Title>Documentation for Qt Speech (Technology Preview)</Title>
+        <Description>Documentation for Qt Speech (Technology Preview)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>820509</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtvirtualkeyboard</Name>
+        <Title>Documentation for Qt 6.9.1 GPLv3 components (QtVirtualKeyboard)</Title>
+        <Description>Documentation for Qt 6.9.1 GPLv3 components (QtVirtualKeyboard)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>3344918</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtvncserver</Name>
+        <Title>Documentation for Qt 6.9.1 VNC Server</Title>
+        <Description>Documentation for Qt 6.9.1 VNC Server</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>506521</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtwaylandcompositor</Name>
+        <Title>Documentation for Qt 6.9.1 Qt Wayland Compositor</Title>
+        <Description>Documentation for Qt 6.9.1 Qt Wayland Compositor</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>4543779</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtwebchannel</Name>
+        <Title>Documentation for Qt 6.9.1 WebChannel</Title>
+        <Description>Documentation for Qt 6.9.1 WebChannel</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>445712</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtwebsockets</Name>
+        <Title>Documentation for Qt 6.9.1 WebSockets</Title>
+        <Description>Documentation for Qt 6.9.1 WebSockets</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>1308416</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc.qtwebview</Name>
+        <Title>Documentation for Qt 6.9.1 WebView</Title>
+        <Description>Documentation for Qt 6.9.1 WebView</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>315205</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection</Name>
+        <Title>Qt 6.9.1 Documentation collection</Title>
+        <Description>Qt 6.9.1 documentation collection.</Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc</Dependencies>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qt3d</Name>
+        <Title>Documentation for Qt 6.9.1 Qt 3D</Title>
+        <Description>Documentation for Qt 6.9.1 Qt 3D</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qt3d</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qt5compat</Name>
+        <Title>Documentation for Qt 6.9.1 Qt 5 Compatibility module</Title>
+        <Description>Documentation for Qt 6.9.1 Qt 5 Compatibility module</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qt5compat</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtactiveqt</Name>
+        <Title>Documentation for Qt 6.9.1 Qt 3D</Title>
+        <Description>Documentation for Qt 6.9.1 Qt 3D</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtactiveqt</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtapplicationmanager</Name>
+        <Title>Documentation for Qt 6.9.1 Application Manager</Title>
+        <Description>Documentation for Qt 6.9.1 Application Manager</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtapplicationmanager</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtbluetooth</Name>
+        <Title>Documentation for Qt 6.9.1 GPLv3 components (QtConnectivity/Bluetooth)</Title>
+        <Description>Documentation for Qt 6.9.1 GPLv3 components (QtConnectivity/Bluetooth)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtbluetooth</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtcharts</Name>
+        <Title>Documentation for Qt 6.9.1 GPLv3 components (QtCharts)</Title>
+        <Description>Documentation for Qt 6.9.1 GPLv3 components (QtCharts)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtcharts</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtcoap</Name>
+        <Title>Documentation for Qt 6.9.1 Qt CoAP</Title>
+        <Description>Documentation for Qt 6.9.1 Qt CoAP</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtcoap</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtdatavis3d</Name>
+        <Title>Documentation for Qt 6.9.1 GPLv3 components (QtDataVisualization)</Title>
+        <Description>Documentation for Qt 6.9.1 GPLv3 components (QtDataVisualization)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtdatavis3d</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtgraphs</Name>
+        <Title>Documentation for Qt 6.9.1 GPLv3 components (QtGraphs)</Title>
+        <Description>Documentation for Qt 6.9.1 GPLv3 components (QtGraphs)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtgraphs</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtgrpc</Name>
+        <Title>Documentation for Qt 6.9.1 Protobuf and Qt 6.9.1 GRPC</Title>
+        <Description>Documentation for Qt 6.9.1 Protobuf and Qt 6.9.1 GRPC</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtgrpc</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qthttpserver</Name>
+        <Title>Documentation for Qt 6.9.1 HTTP Server </Title>
+        <Description>Documentation for Qt 6.9.1 HTTP Server </Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qthttpserver</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtimageformats</Name>
+        <Title>Documentation for Qt 6.9.1 Imageformats</Title>
+        <Description>Documentation for Qt 6.9.1 Imageformats</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtimageformats</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtinterfaceframework</Name>
+        <Title>Documentation for Qt 6.9.1 Interface Framework</Title>
+        <Description>Documentation for Qt 6.9.1 Interface Framework</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtinterfaceframework</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtlanguageserver</Name>
+        <Title>Documentation for Qt 6.9.1 language Server</Title>
+        <Description>Documentation for Qt 6.9.1 language Server</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtlanguageserver</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtlocation</Name>
+        <Title>Documentation for Qt 6.9.1 Location</Title>
+        <Description>Documentation for Qt 6.9.1 Location</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtlocation</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtlottie</Name>
+        <Title>Documentation for Qt 6.9.1 Lottie Animation</Title>
+        <Description>Documentation for Qt 6.9.1 Lottie Animation</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtlottie</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtmqtt</Name>
+        <Title>Documentation for Qt 6.9.1 MQTT</Title>
+        <Description>Documentation for Qt 6.9.1 MQTT</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtmqtt</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtmultimedia</Name>
+        <Title>Documentation for Qt Multimedia</Title>
+        <Description>Documentation for Qt Multimedia</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtmultimedia</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtnetworkauth</Name>
+        <Title>Documentation for Qt Networkauth (Technology Preview)</Title>
+        <Description>Documentation for Qt Networkauth (Technology Preview)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtnetworkauth</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtnfc</Name>
+        <Title>Documentation for Qt 6.9.1 GPLv3 components (QtConnectivity/NFC)</Title>
+        <Description>Documentation for Qt 6.9.1 GPLv3 components (QtConnectivity/NFC)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtnfc</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtopcua</Name>
+        <Title>Documentation for Qt 6.9.1 OPC UA</Title>
+        <Description>Documentation for Qt 6.9.1 OPC UA</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtopcua</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtpositioning</Name>
+        <Title>Documentation for Qt 6.9.1 GPLv3 components (QtPositioning)</Title>
+        <Description>Documentation for Qt 6.9.1 GPLv3 components (QtPositioning)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtpositioning</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtquick3d</Name>
+        <Title>Documentation for Qt 6.9.1 GPLv3 components (QtQuick3D)</Title>
+        <Description>Documentation for Qt 6.9.1 GPLv3 components (QtQuick3D)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtquick3d</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtquick3dphysics</Name>
+        <Title>Documentation for Qt 6.9.1 Quick: 3D Physics </Title>
+        <Description>Documentation for Qt 6.9.1 Quick: 3D Physics </Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtquick3dphysics</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtquickeffectmaker</Name>
+        <Title>Documentation for Qt 6.9.1 Quick Effect Maker</Title>
+        <Description>Documentation for Qt 6.9.1 Quick Effect Maker</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtquickeffectmaker</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtquicktimeline</Name>
+        <Title>Documentation for Qt Quick Timeline</Title>
+        <Description>Documentation for Qt Quick Timeline</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtquicktimeline</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtremoteobjects</Name>
+        <Title>Documentation for Qt Remote Objects</Title>
+        <Description>Documentation for Qt Remote Objects</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtremoteobjects</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtscxml</Name>
+        <Title>Documentation for Qt 6.9.1 SCXML</Title>
+        <Description>Documentation for Qt 6.9.1 SCXML</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtscxml</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtsensors</Name>
+        <Title>Documentation for Qt 6.9.1 Sensors</Title>
+        <Description>Documentation for Qt 6.9.1 Sensors</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtsensors</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtserialbus</Name>
+        <Title>Documentation for Qt 6.9.1 SerialBus</Title>
+        <Description>Documentation for Qt 6.9.1 SerialBus</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtserialbus</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtserialport</Name>
+        <Title>Documentation for Qt 6.9.1 SerialPort</Title>
+        <Description>Documentation for Qt 6.9.1 SerialPort</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtserialport</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtshadertools</Name>
+        <Title>Documentation for Qt 6.9.1 Qt Shader Tools</Title>
+        <Description>Documentation for Qt 6.9.1 Qt Shader Tools</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtshadertools</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtspeech</Name>
+        <Title>Documentation for Qt Speech (Technology Preview)</Title>
+        <Description>Documentation for Qt Speech (Technology Preview)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtspeech</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtvirtualkeyboard</Name>
+        <Title>Documentation for Qt 6.9.1 GPLv3 components (QtVirtualKeyboard)</Title>
+        <Description>Documentation for Qt 6.9.1 GPLv3 components (QtVirtualKeyboard)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtvirtualkeyboard</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtvncserver</Name>
+        <Title>Documentation for Qt 6.9.1 VNC Server</Title>
+        <Description>Documentation for Qt 6.9.1 VNC Server</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtvncserver</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtwaylandcompositor</Name>
+        <Title>Documentation for Qt 6.9.1 Qt Wayland Compositor</Title>
+        <Description>Documentation for Qt 6.9.1 Qt Wayland Compositor</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtwaylandcompositor</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtwebchannel</Name>
+        <Title>Documentation for Qt 6.9.1 WebChannel</Title>
+        <Description>Documentation for Qt 6.9.1 WebChannel</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtwebchannel</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtwebsockets</Name>
+        <Title>Documentation for Qt 6.9.1 WebSockets</Title>
+        <Description>Documentation for Qt 6.9.1 WebSockets</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtwebsockets</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.doc_collection.qtwebview</Name>
+        <Title>Documentation for Qt 6.9.1 WebView</Title>
+        <Description>Documentation for Qt 6.9.1 WebView</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.doc.qtwebview</Dependencies>
+        <AutoDependOn>qt.qt6.691.doc_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples</Name>
+        <Title>Qt 6.9.1 Examples</Title>
+        <Description>Qt 6.9.1 Examples</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>79584252</Size>
+        <Dependencies>qt.tools</Dependencies>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qt3d</Name>
+        <Title>Examples for Qt 6.9.1 3D</Title>
+        <Description>Examples for Qt 6.9.1 3D</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>68132557</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qt5compat</Name>
+        <Title>Examples for Qt 6.9.1 Qt 5 Compatibility module</Title>
+        <Description>Examples for Qt 6.9.1 Qt 5 Compatibility module</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>50423</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtactiveqt</Name>
+        <Title>Examples for Qt 6.9.1 Active Qt</Title>
+        <Description>Examples for Qt 6.9.1 Active Qt</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>45407</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtapplicationmanager</Name>
+        <Title>Examples for Qt 6.9.1 Application Manager</Title>
+        <Description>Examples for Qt 6.9.1 Application Manager</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>948175</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtcharts</Name>
+        <Title>Examples for Qt 6.9.1 GPLv3 components (QtCharts)</Title>
+        <Description>Examples for Qt 6.9.1 GPLv3 components (QtCharts)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>531486</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtcoap</Name>
+        <Title>Examples for Qt 6.9.1 CoAP</Title>
+        <Description>Examples for Qt 6.9.1 CoAP</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>152158</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtconnectivity</Name>
+        <Title>Examples for Qt 6.9.1 GPLv3 components (QtConnectivity)</Title>
+        <Description>Examples for Qt 6.9.1 GPLv3 components (QtConnectivity)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>628233</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtdatavis3d</Name>
+        <Title>Examples for Qt 6.9.1 GPLv3 components (QtDataVisualization)</Title>
+        <Description>Examples for Qt 6.9.1 GPLv3 components (QtDataVisualization)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>3384611</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtgraphs</Name>
+        <Title>Examples for Qt 6.9.1 GPLv3 components (QtGraphs)</Title>
+        <Description>Examples for Qt 6.9.1 GPLv3 components (QtGraphs)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>3544176</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtgrpc</Name>
+        <Title>Examples for Qt 6.9.1 Protobuf and Qt 6.9.1 GRPC</Title>
+        <Description>Examples for Qt 6.9.1 Protobuf and Qt 6.9.1 GRPC</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>446301</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qthttpserver</Name>
+        <Title>Examples for Qt 6.9.1 HTTP Server</Title>
+        <Description>Examples for Qt 6.9.1 HTTP Server </Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>89633</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtinterfaceframework</Name>
+        <Title>Examples for Qt 6.9.1 Interface Framework</Title>
+        <Description>Examples for Qt 6.9.1 Interface Framework</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>2912966</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtlocation</Name>
+        <Title>Examples for Qt 6.9.1 Location</Title>
+        <Description>Examples for Qt 6.9.1 Location</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>3980459</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtmqtt</Name>
+        <Title>Examples for Qt 6.9.1 MQTT</Title>
+        <Description>Examples for Qt 6.9.1 MQTT</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>173387</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtmultimedia</Name>
+        <Title>Examples for Qt Multimedia</Title>
+        <Description>Examples for Qt Multimedia</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>2221978</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtnetworkauth</Name>
+        <Title>Examples for Qt Networkauth (Technology Preview)</Title>
+        <Description>Examples for Qt Networkauth (Technology Preview)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>48942</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtopcua</Name>
+        <Title>Examples for Qt 6.9.1 OPC UA</Title>
+        <Description>Examples for Qt 6.9.1 OPC UA</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>390014</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtpositioning</Name>
+        <Title>Examples for Qt 6.9.1 GPLv3 components (QtPositioning)</Title>
+        <Description>Examples for Qt 6.9.1 GPLv3 components (QtPositioning)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>620242</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtquick3d</Name>
+        <Title>Examples for Qt 6.9.1 GPLv3 components (QtQuick3D)</Title>
+        <Description>Examples for Qt 6.9.1 GPLv3 components (QtQuick3D)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>36039336</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtquick3dphysics</Name>
+        <Title>Examples for Qt 6.9.1 Quick: 3D Physics</Title>
+        <Description>Examples for Qt 6.9.1 Quick: 3D Physics </Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>2731415</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtquickeffectmaker</Name>
+        <Title>Examples for Qt 6.9.1 Quick Effect Maker</Title>
+        <Description>Examples for Qt 6.9.1 Quick Effect Maker</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>274791</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtremoteobjects</Name>
+        <Title>Examples for Qt Remote Objects</Title>
+        <Description>Examples for Qt Remote Objects</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>150076</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtscxml</Name>
+        <Title>Examples for Qt 6.9.1 SCXML</Title>
+        <Description>Examples for Qt 6.9.1 SCXML</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>298752</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtsensors</Name>
+        <Title>Examples for Qt 6.9.1 Sensors</Title>
+        <Description>Examples for Qt 6.9.1 Sensors</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>97896</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtserialbus</Name>
+        <Title>Examples for Qt SerialBus</Title>
+        <Description>Examples for Qt SerialBus</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>582765</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtserialport</Name>
+        <Title>Examples for Qt SerialPort</Title>
+        <Description>Examples for Qt SerialPort</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>139537</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtspeech</Name>
+        <Title>Examples for Qt Speech (Technology Preview)</Title>
+        <Description>Examples for Qt Speech (Technology Preview)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>195223</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtvirtualkeyboard</Name>
+        <Title>Examples for Qt 6.9.1 GPLv3 components (QtVirtualKeyboard)</Title>
+        <Description>Examples for Qt 6.9.1 GPLv3 components (QtVirtualKeyboard)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>31851</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtvncserver</Name>
+        <Title>Examples for Qt 6.9.1 VNC Server</Title>
+        <Description>Examples for Qt 6.9.1 VNC Server</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>118411</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtwaylandcompositor</Name>
+        <Title>Examples for Qt 6.9.1 Qt Wayland Compositor</Title>
+        <Description>Examples for Qt 6.9.1 Qt Wayland Compositor</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>907210</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtwebchannel</Name>
+        <Title>Examples for Qt 6.9.1 WebChannel</Title>
+        <Description>Examples for Qt 6.9.1 WebChannel</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>122757</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtwebsockets</Name>
+        <Title>Examples for Qt 6.9.1 WebSockets</Title>
+        <Description>Examples for Qt 6.9.1 WebSockets</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>299506</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples.qtwebview</Name>
+        <Title>Examples for Qt 6.9.1 WebView</Title>
+        <Description>Examples for Qt 6.9.1 WebView</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>61911</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection</Name>
+        <Title>Qt 6.9.1 Examples collection</Title>
+        <Description>Qt 6.9.1 Examples collection.</Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples</Dependencies>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qt3d</Name>
+        <Title>Examples for Qt 6.9.1 3D</Title>
+        <Description>Examples for Qt 6.9.1 3D</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qt3d</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qt5compat</Name>
+        <Title>Examples for Qt 6.9.1 Qt 5 Compatibility module</Title>
+        <Description>Examples for Qt 6.9.1 Qt 5 Compatibility module</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qt5compat</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtactiveqt</Name>
+        <Title>Examples for Qt 6.9.1 Active Qt</Title>
+        <Description>Examples for Qt 6.9.1 Active Qt</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtactiveqt</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtapplicationmanager</Name>
+        <Title>Examples for Qt 6.9.1 Application Manager</Title>
+        <Description>Examples for Qt 6.9.1 Application Manager</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtapplicationmanager</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtcharts</Name>
+        <Title>Examples for Qt 6.9.1 GPLv3 components (QtCharts)</Title>
+        <Description>Examples for Qt 6.9.1 GPLv3 components (QtCharts)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtcharts</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtcoap</Name>
+        <Title>Examples for Qt 6.9.1 CoAP</Title>
+        <Description>Examples for Qt 6.9.1 CoAP</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtcoap</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtconnectivity</Name>
+        <Title>Examples for Qt 6.9.1 GPLv3 components (QtConnectivity)</Title>
+        <Description>Examples for Qt 6.9.1 GPLv3 components (QtConnectivity)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtconnectivity</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtdatavis3d</Name>
+        <Title>Examples for Qt 6.9.1 GPLv3 components (QtDataVisualization)</Title>
+        <Description>Examples for Qt 6.9.1 GPLv3 components (QtDataVisualization)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtdatavis3d</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtgraphs</Name>
+        <Title>Examples for Qt 6.9.1 GPLv3 components (QtGraphs)</Title>
+        <Description>Examples for Qt 6.9.1 GPLv3 components (QtGraphs)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtgraphs</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtgrpc</Name>
+        <Title>Examples for Qt 6.9.1 Qt Protobuf and Qt 6.9.1 GRPC</Title>
+        <Description>Examples for Qt 6.9.1 Qt Protobuf and Qt 6.9.1 GRPC</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtgrpc</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qthttpserver</Name>
+        <Title>Examples for Qt 6.9.1 HTTP Server</Title>
+        <Description>Examples for Qt 6.9.1 HTTP Server</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qthttpserver</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtinterfaceframework</Name>
+        <Title>Examples for Qt 6.9.1 Interface Framework</Title>
+        <Description>Examples for Qt 6.9.1 Interface Framework</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtinterfaceframework</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtlocation</Name>
+        <Title>Examples for Qt 6.9.1 Location</Title>
+        <Description>Examples for Qt 6.9.1 Location</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtlocation</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtmqtt</Name>
+        <Title>Examples for Qt 6.9.1 MQTT</Title>
+        <Description>Examples for Qt 6.9.1 MQTT</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtmqtt</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtmultimedia</Name>
+        <Title>Examples for Qt Multimedia</Title>
+        <Description>Examples for Qt Multimedia</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtmultimedia</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtnetworkauth</Name>
+        <Title>Examples for Qt Networkauth (Technology Preview)</Title>
+        <Description>Examples for Qt Networkauth (Technology Preview)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtnetworkauth</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtopcua</Name>
+        <Title>Examples for Qt 6.9.1 OPC UA</Title>
+        <Description>Examples for Qt 6.9.1 OPC UA</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtopcua</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtpositioning</Name>
+        <Title>Examples for Qt 6.9.1 GPLv3 components (QtPositioning)</Title>
+        <Description>Examples for Qt 6.9.1 GPLv3 components (QtPositioning)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtpositioning</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtquick3d</Name>
+        <Title>Examples for Qt 6.9.1 GPLv3 components (QtQuick3D)</Title>
+        <Description>Examples for Qt 6.9.1 GPLv3 components (QtQuick3D)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtquick3d</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtquick3dphysics</Name>
+        <Title>Examples for Qt 6.9.1 Quick: 3D Physics</Title>
+        <Description>Examples for Qt 6.9.1 Quick: 3D Physics</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtquick3dphysics</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtquickeffectmaker</Name>
+        <Title>Examples for Qt 6.9.1 Quick Effect Maker</Title>
+        <Description>Examples for Qt 6.9.1 Quick Effect Maker</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtquickeffectmaker</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtremoteobjects</Name>
+        <Title>Examples for Qt Remote Objects</Title>
+        <Description>Examples for Qt Remote Objects</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtremoteobjects</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtscxml</Name>
+        <Title>Examples for Qt 6.9.1 SCXML</Title>
+        <Description>Examples for Qt 6.9.1 SCXML</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtscxml</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtsensors</Name>
+        <Title>Examples for Qt 6.9.1 Sensors</Title>
+        <Description>Examples for Qt 6.9.1 Sensors</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtsensors</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtserialbus</Name>
+        <Title>Examples for Qt SerialBus</Title>
+        <Description>Examples for Qt SerialBus</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtserialbus</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtserialport</Name>
+        <Title>Examples for Qt SerialPort</Title>
+        <Description>Examples for Qt SerialPort</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtserialport</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtspeech</Name>
+        <Title>Examples for Qt Speech (Technology Preview)</Title>
+        <Description>Examples for Qt Speech (Technology Preview)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtspeech</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtvirtualkeyboard</Name>
+        <Title>Examples for Qt 6.9.1 GPLv3 components (QtVirtualKeyboard)</Title>
+        <Description>Examples for Qt 6.9.1 GPLv3 components (QtVirtualKeyboard)</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtvirtualkeyboard</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtvncserver</Name>
+        <Title>Examples for Qt 6.9.1 VNC Server</Title>
+        <Description>Examples for Qt 6.9.1 VNC Server</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtvncserver</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtwaylandcompositor</Name>
+        <Title>Examples for Qt 6.9.1 Qt Wayland Compositor</Title>
+        <Description>Examples for Qt 6.9.1 Qt Wayland Compositor</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtwaylandcompositor</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtwebchannel</Name>
+        <Title>Examples for Qt 6.9.1 WebChannel</Title>
+        <Description>Examples for Qt 6.9.1 WebChannel</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtwebchannel</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtwebsockets</Name>
+        <Title>Examples for Qt 6.9.1 WebSockets</Title>
+        <Description>Examples for Qt 6.9.1 WebSockets</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtwebsockets</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.examples_collection.qtwebview</Name>
+        <Title>Examples for Qt 6.9.1 WebView</Title>
+        <Description>Examples for Qt 6.9.1 WebView</Description>
+        <SortingPriority>1</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.qt6.691.examples.qtwebview</Dependencies>
+        <AutoDependOn>qt.qt6.691.examples_collection</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.ios</Name>
+        <Title>iOS</Title>
+        <Description>Qt 6.9.1 Prebuilt Components for iOS</Description>
+        <SortingPriority>100</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-0-202505291651</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>11083906193</Size>
+        <Dependencies>qt.tools.qtcreator,qt.qt6.691.clang_64,qt.qt6.691.doc,qt.qt6.691.examples,qt.qt6.691.patcher</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt6.691.patcher</Name>
+        <Title>cross-compiled target patcher</Title>
+        <Description>The Patcher component is used to patch build-time paths for cross-compiled targets depending on which host is used to install it.&lt;br>&lt;br>Additionally, this component only contains the patching implementation and thus carries no payload.</Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>6.9.1-202505291653</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.tools</Name>
+        <Title>Build Tools</Title>
+        <Description>Additional development and environment management tools.</Description>
+        <SortingPriority>40</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>1.2.2-0-202412051107</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.tools.cmake</Name>
+        <Title>CMake 3.30.5</Title>
+        <Description>CMake tools 3.30.5</Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>3.30.5-202502251249</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>221111638</Size>
+        <Dependencies>qt.tools.qtcreator</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.tools.maintenance</Name>
+        <Title>Qt Maintenance Tool</Title>
+        <Description>The tool to maintain and update the existing installation, located in the root directory of the installation.</Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>4.10.0-202506090626</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>113584446</Size>
+        <ForcedInstallation>true</ForcedInstallation>
+    </Package>
+    <Package>
+        <Name>qt.tools.ninja</Name>
+        <Title>Ninja 1.12.1</Title>
+        <Description>Ninja 1.12.1</Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>1.12.1-202502251258</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>757848</Size>
+        <Dependencies>qt.tools.qtcreator</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.tools.qtcreator</Name>
+        <Title>SDKTool</Title>
+        <Description>SDKTool</Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>17.0.0-0-202506172050</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>7591480</Size>
+        <ForcedInstallation>true</ForcedInstallation>
+        <Virtual>true</Virtual>
+    </Package>
+    <Package>
+        <Name>qt.tools.qtcreator_gui</Name>
+        <Title>Qt Creator 17.0.0</Title>
+        <Description>IDE for Qt application development</Description>
+        <SortingPriority>1000</SortingPriority>
+        <TreeName moveChildren="true">qtcreator.release_node</TreeName>
+        <Version>17.0.0-0-202506171858</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>979926861</Size>
+        <Dependencies>tools.licenseservice,qt.tools.qtcreator,qt.tools.qtcreator_gui.enterprise.plugins</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.tools.qtcreator_gui.enterprise.plugins</Name>
+        <Title>Qt Creator 17.0.0 Enterprise Plugins</Title>
+        <Description>Enterprise Plugins for Qt Creator</Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>17.0.0-1-202506171858</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>13760384</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.tools.qtcreator_gui.telemetry_evaluator</Name>
+        <Title>Qt Telemetry plugin (Evaluators)</Title>
+        <Description>Collects pseudonymous data from Qt Creator</Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>17.0.0-0-202506171911</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>875166</Size>
+        <AutoDependOn>qt.tools.qtcreator_gui</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.tools.qtdesignstudio</Name>
+        <Title>Qt Design Studio 4.7.2</Title>
+        <Description>Qt Design Studio is a UI design and development environment for creating animated UIs and previewing them on the desktop or on Android and embedded Linux devices. It provides you with tools for accomplishing your tasks throughout the whole process, from design to production.</Description>
+        <SortingPriority>100</SortingPriority>
+        <TreeName moveChildren="true">qtdesignstudio.release</TreeName>
+        <Version>4.7.2-0-202506061435</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>2471574917</Size>
+        <Dependencies>tools.licenseservice</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qtcreator</Name>
+        <Title>Qt Creator</Title>
+        <Description>IDE for Qt application development</Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>1.0.0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+    </Package>
+    <Package>
+        <Name>qtdesignstudio</Name>
+        <Title>Qt Design Studio</Title>
+        <Description>Qt Design Studio</Description>
+        <SortingPriority>70</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>1.0.0-0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>0</Size>
+    </Package>
+    <Package>
+        <Name>tools.licenseservice</Name>
+        <Title>Qt License Service 3.5.0</Title>
+        <Description>On-demand service to manage Qt license reservation requests</Description>
+        <SortingPriority>40</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>3.5.0-202506051150</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2025-08-26</InstallDate>
+        <Size>28689292</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+</Packages>
