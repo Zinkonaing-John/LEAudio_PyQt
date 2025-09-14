@@ -1,0 +1,168 @@
+KOREAN MULTI-LANGUAGE SPEECH TRANSLATOR
+========================================
+
+PROJECT OVERVIEW
+----------------
+This is a PyQt5-based desktop application that provides real-time speech-to-text translation from Korean to multiple target languages (Japanese, Chinese, Vietnamese, and English). The application features a modern, clean UI with voice activity detection, automatic translation, and text-to-speech playback capabilities.
+
+MAIN FEATURES
+-------------
+1. Real-time Korean Speech Recognition
+   - Voice Activity Detection (VAD) with automatic silence detection
+   - Records audio until 1.5 seconds of silence is detected
+   - Uses Google Speech Recognition API for Korean language processing
+
+2. Multi-Language Translation
+   - Supports 4 target languages: Japanese, Chinese, Vietnamese, English
+   - Uses Google Translate API as primary translation service
+   - MyMemory API as fallback translation service
+   - Real-time translation with progress indicators
+
+3. Text-to-Speech (TTS) Audio Playback
+   - Google Text-to-Speech (gTTS) integration
+   - Individual language audio playback
+   - Simultaneous multi-language audio playback option
+   - Audio file management with automatic cleanup
+
+4. Interactive User Interface
+   - Custom animated toggle switches for language selection
+   - Clean, modern black & white design theme
+   - Responsive layout with split panels
+   - Real-time status updates and progress indicators
+   - Individual play buttons for each language
+
+TECHNICAL ARCHITECTURE
+----------------------
+- Framework: PyQt5 (Python GUI framework)
+- Audio Processing: PyAudio, Wave, NumPy
+- Speech Recognition: SpeechRecognition library with Google API
+- Translation: Google Translate API + MyMemory API
+- Text-to-Speech: Google TTS (gTTS)
+- Audio Playback: Pygame mixer
+- Threading: Multi-threaded processing for non-blocking operations
+
+KEY COMPONENTS
+--------------
+1. MainWindow Class
+   - Main application window and UI layout
+   - Signal handling for async operations
+   - State management for translations and audio files
+
+2. ToggleSwitch Widget
+   - Custom animated toggle switch component
+   - Language selection with visual feedback
+   - Smooth animations and hover effects
+
+3. Voice Activity Detection (VAD)
+   - Energy-based voice detection algorithm
+   - Automatic recording start/stop based on audio levels
+   - Configurable silence timeout and energy thresholds
+
+4. Translation Workers
+   - Async translation processing
+   - Multiple API fallback support
+   - Error handling and status reporting
+
+5. Audio Management
+   - TTS generation and playback
+   - Temporary file management
+   - Simultaneous and individual audio playback
+
+CONFIGURATION
+-------------
+- VAD Settings:
+  - Silence Timeout: 1.5 seconds
+  - Energy Threshold: 500
+  - Frame Duration: 0.1 seconds
+  - Chunk Size: 1024 bytes
+
+- Supported Languages:
+  - Source: Korean (ko-KR)
+  - Targets: Japanese (ja), Chinese (zh), Vietnamese (vi), English (en)
+
+- Audio Settings:
+  - Sample Rate: 16000 Hz
+  - Channels: Mono
+  - Format: 16-bit PCM
+  - TTS Output: MP3 format
+
+USER INTERFACE LAYOUT
+---------------------
+1. Header Section
+   - Application title and subtitle
+   - Clean, centered layout
+
+2. Control Section
+   - Large circular microphone button
+   - Language toggle switches in a row
+   - Visual feedback for recording state
+
+3. Input Panel (Left)
+   - Korean speech recognition results
+   - Status updates and progress indicators
+
+4. Output Panel (Right)
+   - 2x2 grid of language translation cards
+   - Each card shows: flag, language name, translation text, play button
+   - Individual play buttons for audio playback
+
+5. Status Bar (Bottom)
+   - Current operation status
+   - Progress bar for long operations
+
+STYLING AND THEME
+-----------------
+- Clean black & white color scheme
+- Modern, minimalist design
+- Custom CSS styling (styles.css)
+- Responsive layout with proper spacing
+- Smooth animations and transitions
+- Professional typography (Segoe UI font family)
+
+DEPENDENCIES
+------------
+- PyQt5: GUI framework
+- speech_recognition: Speech-to-text processing
+- gtts: Google Text-to-Speech
+- pygame: Audio playback
+- pyaudio: Audio recording
+- requests: HTTP API calls
+- numpy: Audio data processing
+- wave: Audio file handling
+
+USAGE WORKFLOW
+--------------
+1. Launch the application
+2. Select target languages using toggle switches
+3. Click the microphone button to start recording
+4. Speak in Korean (recording stops automatically after silence)
+5. View real-time translations in selected languages
+6. Listen to audio playback (automatic or manual)
+7. Use individual play buttons to replay specific languages
+
+ERROR HANDLING
+--------------
+- Network connectivity issues for translation APIs
+- Audio recording failures
+- TTS generation errors
+- File system permissions
+- Graceful fallback to alternative services
+
+PERFORMANCE OPTIMIZATIONS
+-------------------------
+- Multi-threaded processing to prevent UI blocking
+- Efficient audio data processing with NumPy
+- Temporary file cleanup after use
+- Async signal-based communication
+- Optimized UI updates and animations
+
+FUTURE ENHANCEMENTS
+-------------------
+- Additional language support
+- Custom voice models
+- Offline translation capabilities
+- Export functionality for translations
+- Audio recording quality settings
+- Language detection for source speech
+
+This project demonstrates modern Python GUI development with PyQt5, integrating multiple APIs and services to create a comprehensive speech translation solution.

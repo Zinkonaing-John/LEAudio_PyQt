@@ -1,0 +1,197 @@
+HOW TO RUN THE KOREAN MULTI-LANGUAGE SPEECH TRANSLATOR
+=====================================================
+
+PREREQUISITES
+-------------
+1. Python 3.7 or higher installed on your system
+2. Internet connection (required for translation APIs and TTS)
+3. Microphone access permissions
+4. Audio output device (speakers/headphones)
+
+SYSTEM REQUIREMENTS
+-------------------
+- Operating System: Windows, macOS, or Linux
+- RAM: Minimum 4GB (8GB recommended)
+- Storage: At least 100MB free space
+- Audio: Working microphone and speakers/headphones
+
+INSTALLATION STEPS
+------------------
+
+1. CLONE OR DOWNLOAD THE PROJECT
+   - Download the project files to your local machine
+   - Navigate to the project directory: /Users/zinko/Qt/MainProject/
+
+2. CREATE A VIRTUAL ENVIRONMENT (RECOMMENDED)
+   Open terminal/command prompt and run:
+   
+   For Windows:
+   ```
+   python -m venv venv
+   venv\Scripts\activate
+   ```
+   
+   For macOS/Linux:
+   ```
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+
+3. INSTALL REQUIRED DEPENDENCIES
+   Run the following command to install all required packages:
+   ```
+   pip install PyQt5 speech_recognition gtts pygame pyaudio requests numpy
+   ```
+   
+   Or install individually:
+   ```
+   pip install PyQt5
+   pip install speech_recognition
+   pip install gtts
+   pip install pygame
+   pip install pyaudio
+   pip install requests
+   pip install numpy
+   ```
+
+4. INSTALL ADDITIONAL SYSTEM DEPENDENCIES (if needed)
+   
+   For PyAudio on Windows:
+   ```
+   pip install pipwin
+   pipwin install pyaudio
+   ```
+   
+   For PyAudio on macOS:
+   ```
+   brew install portaudio
+   pip install pyaudio
+   ```
+   
+   For PyAudio on Linux (Ubuntu/Debian):
+   ```
+   sudo apt-get install portaudio19-dev python3-pyaudio
+   pip install pyaudio
+   ```
+
+RUNNING THE APPLICATION
+-----------------------
+
+1. ACTIVATE VIRTUAL ENVIRONMENT (if using one)
+   ```
+   # Windows
+   venv\Scripts\activate
+   
+   # macOS/Linux
+   source venv/bin/activate
+   ```
+
+2. NAVIGATE TO PROJECT DIRECTORY
+   ```
+   cd /Users/zinko/Qt/MainProject/
+   ```
+
+3. RUN THE APPLICATION
+   ```
+   python MultilanProject.py
+   ```
+   
+   Or on some systems:
+   ```
+   python3 MultilanProject.py
+   ```
+
+USING THE APPLICATION
+---------------------
+
+1. LAUNCH
+   - The application window will open with a clean interface
+   - You'll see the microphone button and language toggle switches
+
+2. SELECT TARGET LANGUAGES
+   - Use the toggle switches to select which languages you want translations for
+   - Available options: Japanese 🇯🇵, Chinese 🇨🇳, Vietnamese 🇻🇳, English 🇺🇸
+   - You can select one or multiple languages
+
+3. RECORD KOREAN SPEECH
+   - Click the large microphone button (🎤)
+   - The button will turn red and show "Recording..."
+   - Speak clearly in Korean
+   - Recording will automatically stop after 1.5 seconds of silence
+
+4. VIEW TRANSLATIONS
+   - Your Korean speech will appear in the left panel
+   - Translations will appear in the right panel for selected languages
+   - Each language has its own card with flag and translation text
+
+5. LISTEN TO AUDIO
+   - Audio playback starts automatically after translation
+   - Use individual "🎧 Play Again" buttons to replay specific languages
+   - Audio files are automatically cleaned up after use
+
+TROUBLESHOOTING
+---------------
+
+COMMON ISSUES:
+
+1. "No module named 'PyQt5'" error
+   - Solution: Install PyQt5 with: pip install PyQt5
+
+2. "No module named 'pyaudio'" error
+   - Solution: Install system dependencies first, then pip install pyaudio
+   - On Windows: Use pipwin install pyaudio
+
+3. Microphone not working
+   - Check microphone permissions in system settings
+   - Ensure microphone is not being used by another application
+   - Test microphone with other applications first
+
+4. Translation not working
+   - Check internet connection
+   - Verify Google Translate API is accessible
+   - Try again after a few moments (API rate limiting)
+
+5. Audio playback issues
+   - Check speaker/headphone connections
+   - Ensure audio output device is working
+   - Try adjusting system volume
+
+6. "Permission denied" errors
+   - Run terminal/command prompt as administrator (Windows)
+   - Use sudo for installation commands (macOS/Linux)
+
+PERFORMANCE TIPS
+----------------
+- Close other applications to free up system resources
+- Ensure stable internet connection for best translation results
+- Speak clearly and at normal volume for better speech recognition
+- Wait for current operation to complete before starting new recording
+
+DEVELOPMENT MODE
+----------------
+To run in development mode with debugging:
+```
+python -u MultilanProject.py
+```
+
+The -u flag ensures unbuffered output for better debugging.
+
+FILE STRUCTURE
+--------------
+```
+MainProject/
+├── MultilanProject.py      # Main application file
+├── styles.css              # UI styling
+├── project_explanation.txt # Project documentation
+└── how_to_run.txt         # This file
+```
+
+SUPPORT
+-------
+If you encounter issues:
+1. Check that all dependencies are properly installed
+2. Verify Python version compatibility (3.7+)
+3. Ensure microphone and audio permissions are granted
+4. Check internet connectivity for translation services
+
+For additional help, refer to the project_explanation.txt file for technical details about the application architecture and features.

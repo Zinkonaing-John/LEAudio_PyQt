@@ -1,0 +1,240 @@
+REPLACE YOUR OWN API GUIDE
+============================
+
+This guide shows you exactly where and how to replace Google APIs with your own backend APIs in the MultilanProject.py file.
+
+CURRENT GOOGLE API USAGE:
+========================
+
+1. SPEECH RECOGNITION (STT) - Line 282
+   Current: r.recognize_google(audio, language="ko-KR", show_all=False)
+   Function: do_record_with_vad()
+   Purpose: Converts Korean speech audio to text
+
+2. TRANSLATION API - Lines 204, 308-321
+   Current: Google Translate API endpoint
+   Function: do_translate()
+   Purpose: Translates Korean text to target languages (Japanese, Chinese, Vietnamese, English)
+
+3. TEXT-TO-SPEECH (TTS) - Line 340
+   Current: gTTS library (Google TTS)
+   Function: do_tts()
+   Purpose: Converts translated text to audio in target languages
+
+STEP-BY-STEP REPLACEMENT GUIDE:
+==============================
+
+STEP 1: ADD YOUR API CONFIGURATION
+----------------------------------
+Add this at the top of the file (around line 25, after imports):
+
+```python
+# ===== YOUR API CONFIGURATION =====
+YOUR_API_BASE_URL = "https://your-api-domain.com/api"
+YOUR_API_KEY = "your-api-key"  # if authentication required
+YOUR_API_TIMEOUT = 10  # timeout in seconds
+
+# API Endpoints
+YOUR_STT_ENDPOINT = f"{YOUR_API_BASE_URL}/speech-to-text"
+YOUR_TRANSLATE_ENDPOINT = f"{YOUR_API_BASE_URL}/translate"
+YOUR_TTS_ENDPOINT = f"{YOUR_API_BASE_URL}/text-to-speech"
+```
+
+STEP 2: CREATE API HELPER FUNCTIONS
+-----------------------------------
+Add these functions after the configuration section:
+
+```python
+def call_your_speech_api(audio_file_path, language_code):
+    """
+    Call your speech recognition API
+    Returns: recognized text as string
+    """
+    try:
+        with open(audio_file_path, 'rb') as audio_file:
+            files = {'audio': audio_file}
+            data = {'language': language_code}
+            headers = {'Authorization': f'Bearer {YOUR_API_KEY}'}  # if needed
+            
+            response = requests.post(
+                YOUR_STT_ENDPOINT, 
+                files=files, 
+                data=data, 
+                headers=headers,
+                timeout=YOUR_API_TIMEOUT
+            )
+            response.raise_for_status()
+            result = response.json()
+            return result.get('text', '')
+    except Exception as e:
+        print(f"Speech API error: {e}")
+        return ""
+
+def call_your_translation_api(text, source_lang, target_lang):
+    """
+    Call your translation API
+    Returns: translated text as string
+    """
+    try:
+        data = {
+            'text': text,
+            'source_language': source_lang,
+            'target_language': target_lang
+        }
+        headers = {'Authorization': f'Bearer {YOUR_API_KEY}'}  # if needed
+        
+        response = requests.post(
+            YOUR_TRANSLATE_ENDPOINT,
+            json=data,
+            headers=headers,
+            timeout=YOUR_API_TIMEOUT
+        )
+        response.raise_for_status()
+        result = response.json()
+        return result.get('translated_text', '')
+    except Exception as e:
+        print(f"Translation API error: {e}")
+        return "Translation failed"
+
+def call_your_tts_api(text, language_code, output_file_path):
+    """
+    Call your text-to-speech API
+    Saves audio file to output_file_path
+    """
+    try:
+        data = {
+            'text': text,
+            'language': language_code,
+            'format': 'mp3'  # or whatever format you prefer
+        }
+        headers = {'Authorization': f'Bearer {YOUR_API_KEY}'}  # if needed
+        
+        response = requests.post(
+            YOUR_TTS_ENDPOINT,
+            json=data,
+            headers=headers,
+            timeout=YOUR_API_TIMEOUT
+        )
+        response.raise_for_status()
+        
+        # Save the audio response to file
+        with open(output_file_path, 'wb') as f:
+            f.write(response.content)
+            
+    except Exception as e:
+        print(f"TTS API error: {e}")
+```
+
+STEP 3: REPLACE SPEECH RECOGNITION (Line 282)
+---------------------------------------------
+In the do_record_with_vad() function, find this line:
+```python
+text = r.recognize_google(audio, language="ko-KR", show_all=False)
+```
+
+Replace with:
+```python
+text = call_your_speech_api(temp_wav.name, "ko-KR")
+```
+
+STEP 4: REPLACE TRANSLATION API (Lines 308-321)
+-----------------------------------------------
+In the do_translate() function, replace the entire try block (lines 308-321) with:
+
+```python
+def do_translate(text, target_code):
+    try:
+        translated = call_your_translation_api(text, "ko", target_code)
+        signals.translation_ready.emit(translated, target_code)
+    except Exception as e:
+        signals.translation_ready.emit(f"Error: {e}", target_code)
+```
+
+STEP 5: REPLACE TTS API (Line 340)
+----------------------------------
+In the do_tts() function, find these lines:
+```python
+tts = gTTS(text=text, lang=target_code)
+tts.save(audio_file)
+```
+
+Replace with:
+```python
+call_your_tts_api(text, target_code, audio_file)
+```
+
+STEP 6: REMOVE GOOGLE API IMPORTS (Optional)
+--------------------------------------------
+You can remove these imports if not using Google APIs elsewhere:
+```python
+# Remove this line if not using Google TTS:
+from gtts import gTTS
+
+# Remove this line if not using Google Speech Recognition:
+import speech_recognition as sr
+```
+
+STEP 7: UPDATE CONFIGURATION CONSTANTS
+-------------------------------------
+Remove or comment out these lines (around line 204):
+```python
+# GOOGLE_TRANSLATE_URL = "https://translate.googleapis.com/translate_a/single"
+# MYMEMORY_URL = "https://api.mymemory.translated.net/get"  # if not using fallback
+```
+
+TESTING YOUR API INTEGRATION:
+============================
+
+1. Test Speech Recognition:
+   - Record Korean speech
+   - Check if text appears in the input panel
+
+2. Test Translation:
+   - Verify translations appear in all selected language boxes
+   - Check for error messages in status bar
+
+3. Test TTS:
+   - Click "Play Again" buttons
+   - Verify audio plays correctly
+
+TROUBLESHOOTING:
+===============
+
+Common Issues:
+- API timeout: Increase YOUR_API_TIMEOUT value
+- Authentication: Check YOUR_API_KEY is correct
+- File format: Ensure your TTS API returns the expected audio format
+- Error handling: Check console output for API error messages
+
+API Response Format Examples:
+============================
+
+Your APIs should return JSON in these formats:
+
+Speech Recognition:
+```json
+{
+    "text": "안녕하세요"
+}
+```
+
+Translation:
+```json
+{
+    "translated_text": "Hello"
+}
+```
+
+Text-to-Speech:
+- Should return binary audio data (MP3, WAV, etc.)
+
+NOTES:
+======
+- Keep the existing error handling structure
+- The signals system (transcription_ready, translation_ready, tts_ready) should work unchanged
+- Test each API individually before integrating
+- Consider adding retry logic for failed API calls
+- Monitor API usage and costs
+
+Last Updated: [Current Date]
+Version: 1.0

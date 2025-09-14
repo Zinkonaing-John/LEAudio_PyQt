@@ -1,0 +1,365 @@
+MULTI-CHANNEL AUDIO OUTPUT GUIDE
+================================
+
+This guide shows how to modify the audio system to send different languages to different audio channels/outputs, especially for Raspberry Pi 5 deployment.
+
+CURRENT AUDIO SYSTEM:
+====================
+
+Currently, all languages play through the same audio output (default system audio).
+- All TTS audio plays simultaneously through pygame mixer
+- Single audio device handles all language outputs
+
+FUTURE MULTI-CHANNEL SYSTEM:
+===========================
+
+Each language will be assigned to a specific audio channel/output:
+- Japanese → Audio Channel 1 (e.g., HDMI output)
+- Chinese → Audio Channel 2 (e.g., USB audio device)
+- Vietnamese → Audio Channel 3 (e.g., Bluetooth speaker)
+- English → Audio Channel 4 (e.g., 3.5mm jack)
+
+IMPLEMENTATION STEPS:
+====================
+
+STEP 1: ADD AUDIO CHANNEL CONFIGURATION
+---------------------------------------
+Add this configuration section to MultilanProject.py (around line 200):
+
+```python
+# ===== MULTI-CHANNEL AUDIO CONFIGURATION =====
+AUDIO_CHANNELS = {
+    "Japanese": {
+        "device_id": 0,  # Audio device ID for Japanese
+        "device_name": "HDMI Audio",  # Human readable name
+        "enabled": True
+    },
+    "Chinese": {
+        "device_id": 1,  # Audio device ID for Chinese
+        "device_name": "USB Audio Device",
+        "enabled": True
+    },
+    "Vietnamese": {
+        "device_id": 2,  # Audio device ID for Vietnamese
+        "device_name": "Bluetooth Speaker",
+        "enabled": True
+    },
+    "English": {
+        "device_id": 3,  # Audio device ID for English
+        "device_name": "3.5mm Audio Jack",
+        "enabled": True
+    }
+}
+
+# Fallback to default audio if specific channel not available
+USE_FALLBACK_AUDIO = True
+DEFAULT_AUDIO_DEVICE = None  # None = system default
+```
+
+STEP 2: CREATE AUDIO DEVICE DETECTION FUNCTION
+----------------------------------------------
+Add this function to detect available audio devices:
+
+```python
+def get_available_audio_devices():
+    """
+    Get list of available audio devices
+    Returns: List of (device_id, device_name) tuples
+    """
+    try:
+        pygame.mixer.init()
+        devices = []
+        
+        # Get number of audio devices
+        num_devices = pygame.mixer.get_num_devices()
+        
+        for i in range(num_devices):
+            device_name = pygame.mixer.get_device_name(i)
+            devices.append((i, device_name))
+            
+        return devices
+    except Exception as e:
+        print(f"Error detecting audio devices: {e}")
+        return [(0, "Default Audio Device")]
+
+def initialize_audio_channels():
+    """
+    Initialize pygame mixer for each language channel
+    Returns: Dictionary mapping language to mixer instance
+    """
+    channels = {}
+    
+    for language, config in AUDIO_CHANNELS.items():
+        if not config["enabled"]:
+            continue
+            
+        try:
+            # Initialize mixer for specific device
+            pygame.mixer.init(
+                frequency=22050,
+                size=-16,
+                channels=2,
+                buffer=512,
+                device=config["device_id"]
+            )
+            channels[language] = pygame.mixer
+            print(f"Initialized audio channel for {language}: {config['device_name']}")
+            
+        except Exception as e:
+            print(f"Failed to initialize {language} channel: {e}")
+            if USE_FALLBACK_AUDIO:
+                # Use default audio as fallback
+                pygame.mixer.init()
+                channels[language] = pygame.mixer
+                print(f"Using fallback audio for {language}")
+    
+    return channels
+```
+
+STEP 3: MODIFY AUDIO PLAYBACK FUNCTIONS
+---------------------------------------
+Replace the existing audio playback functions:
+
+```python
+def play_audio_to_channel(audio_file, language, channels_dict):
+    """
+    Play audio file to specific language channel
+    """
+    try:
+        if language not in channels_dict:
+            print(f"No audio channel configured for {language}")
+            return
+            
+        if not os.path.exists(audio_file):
+            print(f"Audio file not found: {audio_file}")
+            return
+            
+        # Get the mixer for this language
+        mixer = channels_dict[language]
+        
+        # Load and play sound
+        sound = mixer.Sound(audio_file)
+        sound.play()
+        
+        print(f"Playing {language} audio on {AUDIO_CHANNELS[language]['device_name']}")
+        
+    except Exception as e:
+        print(f"Error playing {language} audio: {e}")
+
+def play_all_audio_multi_channel(audio_files_map, channels_dict):
+    """
+    Play all audio files simultaneously on their respective channels
+    audio_files_map: {language_code: audio_file_path}
+    """
+    try:
+        threads = []
+        
+        for language_code, audio_file in audio_files_map.items():
+            if not audio_file or not os.path.exists(audio_file):
+                continue
+                
+            # Map language code to language name
+            language_name = None
+            for name, code in TARGET_LANGS.items():
+                if code == language_code:
+                    language_name = name
+                    break
+                    
+            if language_name and language_name in channels_dict:
+                # Play each language on its own channel in separate thread
+                thread = threading.Thread(
+                    target=play_audio_to_channel,
+                    args=(audio_file, language_name, channels_dict),
+                    daemon=True
+                )
+                threads.append(thread)
+                thread.start()
+        
+        # Wait for all audio to finish
+        for thread in threads:
+            thread.join()
+            
+    except Exception as e:
+        print(f"Multi-channel audio playback error: {e}")
+
+def play_single_audio_multi_channel(audio_file, language_code, channels_dict):
+    """
+    Play single audio file on its designated channel
+    """
+    try:
+        # Map language code to language name
+        language_name = None
+        for name, code in TARGET_LANGS.items():
+            if code == language_code:
+                language_name = name
+                break
+                
+        if language_name and language_name in channels_dict:
+            play_audio_to_channel(audio_file, language_name, channels_dict)
+        else:
+            print(f"No audio channel configured for language code: {language_code}")
+            
+    except Exception as e:
+        print(f"Single audio playback error: {e}")
+```
+
+STEP 4: MODIFY MAIN WINDOW CLASS
+--------------------------------
+Add audio channel initialization to MainWindow.__init__():
+
+```python
+class MainWindow(QWidget):
+    def __init__(self):
+        super().__init__()
+        # ... existing code ...
+        
+        # Initialize multi-channel audio
+        self.audio_channels = initialize_audio_channels()
+        
+        # ... rest of existing code ...
+```
+
+STEP 5: UPDATE AUDIO PLAYBACK CALLS
+-----------------------------------
+Replace the existing audio playback calls:
+
+In on_all_translations_done():
+```python
+def on_all_translations_done(self):
+    # Play all audio on their respective channels
+    if self.audio_files_map:
+        threading.Thread(
+            target=play_all_audio_multi_channel,
+            args=(self.audio_files_map, self.audio_channels),
+            daemon=True
+        ).start()
+```
+
+In on_play_again():
+```python
+def on_play_again(self, language_name):
+    code = TARGET_LANGS.get(language_name)
+    if not code:
+        return
+    audio_file = self.audio_files_map.get(code)
+    if audio_file and os.path.exists(audio_file):
+        threading.Thread(
+            target=play_single_audio_multi_channel,
+            args=(audio_file, code, self.audio_channels),
+            daemon=True
+        ).start()
+    else:
+        # ... existing fallback code ...
+```
+
+RASPBERRY PI 5 SPECIFIC SETUP:
+==============================
+
+1. AUDIO DEVICE CONFIGURATION:
+   - HDMI Audio: Usually device 0
+   - USB Audio: Usually device 1 or 2
+   - Bluetooth: Usually device 3 or 4
+   - 3.5mm Jack: Usually device 0 or 1
+
+2. DETECT AVAILABLE DEVICES:
+   Add this function to list all available audio devices:
+
+```python
+def list_audio_devices():
+    """List all available audio devices for configuration"""
+    devices = get_available_audio_devices()
+    print("Available Audio Devices:")
+    for device_id, device_name in devices:
+        print(f"  Device {device_id}: {device_name}")
+    return devices
+```
+
+3. RASPBERRY PI AUDIO CONFIG:
+   ```bash
+   # Check available audio devices
+   aplay -l
+   
+   # Test specific device
+   aplay -D hw:1,0 test.wav  # Play on device 1
+   ```
+
+4. PYTHON AUDIO DEVICE MAPPING:
+   ```python
+   # Map Raspberry Pi audio devices
+   RASPBERRY_PI_AUDIO_DEVICES = {
+       "hdmi": 0,      # HDMI audio output
+       "usb": 1,       # USB audio device
+       "bluetooth": 2, # Bluetooth audio
+       "jack": 3       # 3.5mm audio jack
+   }
+   ```
+
+TESTING MULTI-CHANNEL AUDIO:
+============================
+
+1. Test Individual Channels:
+   ```python
+   # Test each language channel separately
+   for language in ["Japanese", "Chinese", "Vietnamese", "English"]:
+       test_audio_file = f"test_{language}.wav"
+       play_audio_to_channel(test_audio_file, language, self.audio_channels)
+   ```
+
+2. Test Simultaneous Playback:
+   - Record Korean speech
+   - Select multiple languages
+   - Verify each language plays on its designated channel
+
+3. Debug Audio Issues:
+   ```python
+   # Add this to debug audio channel issues
+   def debug_audio_channels(self):
+       print("Audio Channel Status:")
+       for language, mixer in self.audio_channels.items():
+           print(f"  {language}: {AUDIO_CHANNELS[language]['device_name']}")
+   ```
+
+ADVANCED FEATURES:
+=================
+
+1. DYNAMIC CHANNEL ASSIGNMENT:
+   ```python
+   def assign_language_to_channel(self, language, device_id):
+       """Dynamically assign language to audio channel"""
+       AUDIO_CHANNELS[language]["device_id"] = device_id
+       # Reinitialize audio channels
+       self.audio_channels = initialize_audio_channels()
+   ```
+
+2. VOLUME CONTROL PER CHANNEL:
+   ```python
+   def set_channel_volume(self, language, volume):
+       """Set volume for specific language channel (0.0 to 1.0)"""
+       if language in self.audio_channels:
+           self.audio_channels[language].music.set_volume(volume)
+   ```
+
+3. CHANNEL ENABLE/DISABLE:
+   ```python
+   def toggle_language_channel(self, language, enabled):
+       """Enable/disable specific language audio channel"""
+       AUDIO_CHANNELS[language]["enabled"] = enabled
+       if enabled:
+           # Reinitialize this channel
+           pass
+       else:
+           # Remove from active channels
+           if language in self.audio_channels:
+               del self.audio_channels[language]
+   ```
+
+NOTES:
+======
+- Test each audio device individually before implementing
+- Consider audio latency differences between channels
+- Some audio devices may not support simultaneous playback
+- Monitor system resources when playing multiple audio streams
+- Consider using ALSA directly for more control on Raspberry Pi
+
+Last Updated: [Current Date]
+Version: 1.0
