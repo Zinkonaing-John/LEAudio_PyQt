@@ -40,7 +40,7 @@ INSTALLATION STEPS
 3. INSTALL REQUIRED DEPENDENCIES
    Run the following command to install all required packages:
    ```
-   pip install PyQt5 speech_recognition gtts pygame pyaudio requests numpy
+   pip install PyQt5 speech_recognition gtts pygame pyaudio requests numpy sounddevice soundfile
    ```
    
    Or install individually:
@@ -52,6 +52,8 @@ INSTALLATION STEPS
    pip install pyaudio
    pip install requests
    pip install numpy
+   pip install sounddevice
+   pip install soundfile
    ```
 
 4. INSTALL ADDITIONAL SYSTEM DEPENDENCIES (if needed)

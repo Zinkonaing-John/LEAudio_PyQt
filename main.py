@@ -9,7 +9,6 @@ import threading
 import requests
 import time
 from gtts import gTTS
-import pygame
 import pyaudio
 import wave
 import numpy as np
@@ -92,7 +91,7 @@ class MicrophoneButton(QPushButton):
         self.is_recording = False
         self._ring_radius = 0
         
-        
+
         self.setStyleSheet("""
             QPushButton {
                 background-color: #87CEEB; 
@@ -112,7 +111,7 @@ class MicrophoneButton(QPushButton):
             }
         """)
         
-       
+
         self.ring_animation = QPropertyAnimation(self, b"ring_radius")
         self.ring_animation.setDuration(1500)
         self.ring_animation.setStartValue(0)
@@ -132,18 +131,17 @@ class MicrophoneButton(QPushButton):
     def paintEvent(self, event):
         if self.is_recording:
             painter = QPainter(self)
-            painter.setRenderHint(QPainter.Antialiasing)
-            
+            painter.setRenderHint(QPainter.RenderHint.Antialiasing)
+
             center = self.rect().center()
-            
-            
+
+
             opacity = 1.0 - (self._ring_radius / 40.0)
-            
+
             ring_color = QColor(255, 107, 107, int(200 * opacity))
             painter.setBrush(ring_color)
-            painter.setPen(Qt.NoPen)
-            
-            
+            painter.setPen(Qt.PenStyle.NoPen)
+
             painter.drawEllipse(center, self._ring_radius, self._ring_radius)
 
        
@@ -167,7 +165,7 @@ class DeviceSelector(QComboBox):
         self.language = language
         self.setMinimumWidth(200)
         self.setStyleSheet("""
-            QComboBox {
+            QComboBox { /* This style is for PyQt5, will need adjustment for PyQt6 if issues arise */
                 background-color: rgba(255, 255, 255, 0.8);
                 border: 1px solid rgba(255, 255, 255, 0.9);
                 border-radius: 8px;
@@ -199,11 +197,11 @@ class DeviceSelector(QComboBox):
         self.clear()
         self.addItem("Default Device", "default")
         
-        for device_name in discovered_audio_device_ids:
-            self.addItem(device_name, device_name)
+        for device in discovered_audio_devices:
+            self.addItem(device['name'], device['index'])
     
     def get_selected_device(self):
-        """Get the currently selected device name."""
+        """Get the currently selected device index."""
         return self.currentData()
 
 
@@ -215,19 +213,19 @@ class TranslationCard(QFrame):
         self.language = language
         self.flag_emoji = flag_emoji
         
-       
+
         layout = QVBoxLayout()
         layout.setContentsMargins(15, 15, 15, 15)
         layout.setSpacing(10)
         
-        
+
         header_layout = QHBoxLayout()
         header_layout.setSpacing(8)
         
         self.flag_label = QLabel(flag_emoji)
         self.flag_label.setFont(QFont("Arial", 20))
         self.flag_label.setFixedSize(40, 40)
-        self.flag_label.setAlignment(Qt.AlignCenter)
+        self.flag_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.flag_label.setStyleSheet("""
             QLabel {
                 background-color: transparent;
@@ -245,13 +243,13 @@ class TranslationCard(QFrame):
                 border: none;
             }
         """)
-        
-        
-        header_layout.addWidget(self.flag_label, alignment=Qt.AlignVCenter)
+
+
+        header_layout.addWidget(self.flag_label, alignment=Qt.AlignmentFlag.AlignVCenter)
         header_layout.addWidget(self.language_label)
         header_layout.addStretch()
-        
-        
+
+
         self.channel_indicator = QLabel()
         self.channel_indicator.setFixedSize(90, 24)
         self.channel_indicator.setAlignment(Qt.AlignCenter)
@@ -265,12 +263,12 @@ class TranslationCard(QFrame):
             }
         """)
         self.channel_indicator.setVisible(False)
-        header_layout.addWidget(self.channel_indicator)
-        
+        header_layout.addWidget(self.channel_indicator) # This was already present
+
         # Add device selector
         self.device_selector = DeviceSelector(language)
-        self.device_selector.setVisible(False)
-        header_layout.addWidget(self.device_selector)
+        self.device_selector.setVisible(True)  # Always visible
+        header_layout.addWidget(self.device_selector) # This was already present
         
        
         self.text_area = QTextEdit()
@@ -291,10 +289,10 @@ class TranslationCard(QFrame):
                 border: 2px solid rgba(100, 150, 255, 0.8);
             }
         """)
-       
+
         self.text_area.style().unpolish(self.text_area)
         self.text_area.style().polish(self.text_area)
-        
+
        
         self.play_button = QPushButton("▶️ Play")
         self.play_button.setFixedSize(80, 30)
@@ -309,9 +307,9 @@ class TranslationCard(QFrame):
             QPushButton:hover { background-color: #7BB3D9; }
             QPushButton:disabled { background-color: #cccccc; }
         """)
-        self.play_button.setEnabled(False)
-        
-        
+        self.play_button.setEnabled(False) # This was already present
+
+
         layout.addLayout(header_layout)
         layout.addWidget(self.text_area)
         
@@ -320,7 +318,7 @@ class TranslationCard(QFrame):
         card_bottom_layout = QHBoxLayout()
         card_bottom_layout.addStretch()
         card_bottom_layout.addWidget(self.play_button)
-        layout.addLayout(card_bottom_layout)
+        layout.addLayout(card_bottom_layout) # This was already present
         self.setLayout(layout)
         
         self.setStyleSheet("""
@@ -362,12 +360,9 @@ TARGET_LANGS = {
     "Vietnamese": "vi"
 }
 
-# VAD Settings
-VAD_ENERGY_THRESHOLD = 500
-VAD_CHUNK_SIZE = 1024
+# Audio recording chunk size
 
 # Translation endpoints
-GOOGLE_TRANSLATE_URL = "https://translate.googleapis.com/translate_a/single"
 MYMEMORY_URL = "https://api.mymemory.translated.net/get"
 
 # ===== MULTI-CHANNEL AUDIO CONFIGURATION =====
@@ -379,13 +374,16 @@ TARGET_AUDIO_DEVICE_NAMES = [
     "Built-in Output"   # Example for second slave device
 ]
 
-# This will be populated at runtime with the discovered device IDs.
-discovered_audio_device_ids = []
-# A lock to prevent multiple threads from trying to use pygame.mixer at once
+# The application will search for these and map them to device IDs dynamically.
+# Use a separate script with `list_audio_devices()` to find the exact names.
+TARGET_AUDIO_DEVICE_NAMES = [
+    "USB Audio Device", # Example for first slave device
+    "Built-in Output"   # Example for second slave device
+]
 
-def calculate_energy(audio_data):
-    """Calculate energy of audio frame for VAD"""
-    return np.sum(np.frombuffer(audio_data, dtype=np.int16) ** 2) / len(audio_data)
+# This will be populated at runtime with the discovered device objects.
+discovered_audio_devices = []
+
 
 def list_audio_devices():
     """Helper function to print all available audio output devices."""
@@ -398,104 +396,203 @@ def list_audio_devices():
 
 def find_all_output_devices():
     """Finds all available audio output devices."""
-    global discovered_audio_device_ids
+    global discovered_audio_devices
     devices = sd.query_devices()
     
     # Clear previous findings
-    discovered_audio_device_ids.clear()
+    discovered_audio_devices.clear()
     
     # Find all output devices
     for i, device in enumerate(devices):
         if device['max_output_channels'] > 0:
-            device_name = device['name']
-            discovered_audio_device_ids.append(device_name)
-            print(f"Found output device: {device_name}")
+            device_info = {'name': device['name'], 'index': i}
+            discovered_audio_devices.append(device_info)
+            print(f"Found output device: {device['name']} (Index: {i})")
     
-    return discovered_audio_device_ids
+    # Test device availability with different approaches
+    print("\n--- Testing Discovered Output Devices ---")
+    for device_info in discovered_audio_devices:
+        device_idx = device_info['index']
+        device_name = device_info['name']
+        
+        try:
+            device = devices[device_idx]
+            print(f"Device {device_idx}: {device_name} - Output channels: {device['max_output_channels']}")
+            
+            test_passed = False
+            import numpy as np
+            test_tone = np.sin(2 * np.pi * 440 * np.linspace(0, 0.1, 44100)).astype(np.float32)  # 0.1 second 440Hz tone at 44.1kHz
+            
+            # Define test configurations (samplerate, channels)
+            test_configs = [
+                (44100, device['max_output_channels']), # Default
+                (44100, 1), # Mono
+                (22050, device['max_output_channels']), # Lower SR
+                (22050, 1) # Lower SR, mono
+            ]
+
+            for sr_test, ch_test in test_configs:
+                try:
+                    # Adjust data for channel count
+                    current_test_tone = test_tone
+                    if ch_test == 1 and test_tone.ndim > 1:
+                        current_test_tone = test_tone[:, 0]
+                    elif ch_test > 1 and test_tone.ndim == 1:
+                        current_test_tone = np.column_stack([test_tone, test_tone])
+
+                    sd.play(current_test_tone, samplerate=sr_test, device=device_idx)
+                    sd.wait() # Wait for the test tone to finish
+                    print(f"  ✓ Device {device_idx} audio test PASSED (SR={sr_test}, CH={ch_test})")
+                    test_passed = True
+                    break # If one test passes, move to next device
+                except Exception as test_error:
+                    print(f"  ✗ Device {device_idx} test FAILED (SR={sr_test}, CH={ch_test}): {test_error}")
+            
+            if not test_passed:
+                print(f"  ✗ Device {device_idx} ALL TESTS FAILED")
+                
+        except Exception as e:
+            print(f"Device {device_idx}: Error - {e}")
+    
+    return discovered_audio_devices
 
 def find_audio_device_ids_by_name():
     """Legacy function - now redirects to find_all_output_devices."""
     return find_all_output_devices()
 
-def do_record_with_vad(signals):
-    """Record with Voice Activity Detection - stops after 1.5s of silence"""
-    signals.set_status.emit("Listening...")
+# Audio recording chunk size
+AUDIO_CHUNK_SIZE = 1024
+
+# Normal recording function (records until stop_event is set)
+def do_record(stop_event, signals):
+    """Record audio until stop_event is set, then transcribe."""
+    signals.set_status.emit("Recording... (speak now)")
+    
+    # Audio configuration
+    CHUNK = AUDIO_CHUNK_SIZE
+    FORMAT = pyaudio.paInt16
+    CHANNELS = 1
+    RATE = 16000
     
     p = pyaudio.PyAudio()
+    
     try:
-        stream = p.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=VAD_CHUNK_SIZE)
-        frames, last_voice_time, voice_detected = [], time.time(), False
+        stream = p.open(
+            format=FORMAT,
+            channels=CHANNELS,
+            rate=RATE,
+            input=True,
+            frames_per_buffer=CHUNK
+        )
         
-        while True:
-            data = stream.read(VAD_CHUNK_SIZE, exception_on_overflow=False)
+        frames = []
+        
+        while not stop_event.is_set():
+            data = stream.read(CHUNK, exception_on_overflow=False)
             frames.append(data)
-            energy = calculate_energy(data)
-            
-            if energy > VAD_ENERGY_THRESHOLD:
-                last_voice_time = time.time()
-                if not voice_detected:
-                    voice_detected = True
-                    signals.set_status.emit("Voice detected...")
-            elif voice_detected and (time.time() - last_voice_time > 1.5):
-                signals.set_status.emit("Silence detected, processing...")
-                break
-        
+
+        signals.set_status.emit("Recording stopped, processing...")
         stream.stop_stream()
         stream.close()
         
-        with tempfile.NamedTemporaryFile(delete=False, suffix='.wav') as temp_wav:
+        if len(frames) > 0:
+            # Convert frames to audio data
+            audio_data = b''.join(frames)
+
+            # Create temporary WAV file
+            temp_wav = tempfile.NamedTemporaryFile(delete=False, suffix='.wav')
             with wave.open(temp_wav.name, 'wb') as wf:
-                wf.setnchannels(1)
-                wf.setsampwidth(p.get_sample_size(pyaudio.paInt16))
-                wf.setframerate(16000)
-                wf.writeframes(b''.join(frames))
-            
+                wf.setnchannels(CHANNELS)
+                wf.setsampwidth(p.get_sample_size(FORMAT))
+                wf.setframerate(RATE)
+                wf.writeframes(audio_data)
+
+            # Transcribe the audio
             signals.set_status.emit("Transcribing...")
             r = sr.Recognizer()
-            with sr.AudioFile(temp_wav.name) as source:
-                audio = r.record(source)
-            text = r.recognize_google(audio, language="ko-KR")
-            signals.transcription_ready.emit(text)
-        os.unlink(temp_wav.name)
+            try:
+                with sr.AudioFile(temp_wav.name) as source:
+                    audio = r.record(source)
+                text = r.recognize_google(audio, language="ko-KR")
+                signals.transcription_ready.emit(text)
+                signals.set_status.emit("Transcription done.")
+            except sr.UnknownValueError:
+                signals.set_status.emit("Could not understand audio.")
+                signals.transcription_ready.emit("")
+            except sr.RequestError as e:
+                signals.set_status.emit(f"STT request error: {e}")
+                signals.transcription_ready.emit("")
+            except Exception as e:
+                signals.set_status.emit(f"STT error: {e}")
+                signals.transcription_ready.emit("")
+            finally:
+                # Clean up temp file
+                try:
+                    os.unlink(temp_wav.name)
+                except Exception as e:
+                    print(f"Error unlinking temp file: {e}")
+        else:
+            signals.set_status.emit("No audio recorded")
+            signals.transcription_ready.emit("")
             
     except Exception as e:
-        signals.set_status.emit(f"Error: {e}")
+        signals.set_status.emit(f"Recording error: {e}")
         signals.transcription_ready.emit("")
     finally:
+        if stream.is_active(): stream.stop_stream()
+        stream.close()
         p.terminate()
-
-def do_translate(text, target_code, signals):
-    try:
-        params = {"client": "gtx", "sl": "ko", "tl": target_code, "dt": "t", "q": text}
-        resp = requests.get(GOOGLE_TRANSLATE_URL, params=params, timeout=5)
-        translated = resp.json()[0][0][0]
+def do_translate(text, target_code, signals): # noqa: F811
+    """Translate text using MyMemory API."""
+    if not text:
+        signals.translation_ready.emit("", target_code)
+        return
+    try: # Fallback
+        params = {"q": text, "langpair": f"ko|{target_code}"}
+        resp = requests.get(MYMEMORY_URL, params=params, timeout=5)
+        translated = resp.json().get("responseData", {}).get("translatedText", "Translation failed")
         signals.translation_ready.emit(translated, target_code)
-    except Exception:
-        try: # Fallback
-            params = {"q": text, "langpair": f"ko|{target_code}"}
-            resp = requests.get(MYMEMORY_URL, params=params, timeout=5)
-            translated = resp.json().get("responseData", {}).get("translatedText", "Translation failed")
-            signals.translation_ready.emit(translated, target_code)
-        except Exception as e:
-            signals.translation_ready.emit(f"Error: {e}", target_code)
+    except Exception as e:
+        signals.translation_ready.emit(f"Error: {e}", target_code)
 
 def do_tts(text, target_code, audio_file, signals):
     try:
         tts = gTTS(text=text, lang=target_code)
         tts.save(audio_file)
-        signals.tts_ready.emit(audio_file, target_code)
+        
+        # Ensure file is completely written before signaling ready
+        import time
+        time.sleep(0.1)  # Small delay to ensure file is fully written
+        
+        # Verify file exists and has content
+        if os.path.exists(audio_file) and os.path.getsize(audio_file) > 0:
+            signals.tts_ready.emit(audio_file, target_code)
+        else:
+            print(f"TTS file not properly created for {target_code}")
+            signals.tts_ready.emit("", target_code)
     except Exception as e:
         print(f"TTS error for {target_code}: {e}")
         signals.tts_ready.emit("", target_code)
 
-def play_audio_on_device(audio_file, device_name=None):
+def play_audio_on_device(audio_file, device_index=None, target_code=None): # noqa: F811
     """Plays an audio file on a specific device using sounddevice."""
     try:
+        if not os.path.exists(audio_file):
+            print(f"Audio file not found: {audio_file}")
+            return
+
         data, fs = sf.read(audio_file, dtype='float32')
-        sd.play(data, fs, device=device_name)
-        sd.wait()  # Wait for the sound to finish playing
+        if data.size == 0:
+            print(f"Empty audio file: {audio_file}")
+            return
+
+        # Use an OutputStream for robust, thread-safe playback
+        with sd.OutputStream(samplerate=fs, device=device_index, channels=data.shape[1] if data.ndim > 1 else 1) as stream:
+            stream.write(data)
+        print(f"Finished playing {audio_file} on device {device_index or 'Default'}")
+
     except Exception as e:
-        print(f"Error playing audio on device '{device_name}': {e}")
+        print(f"Critical error in play_audio_on_device for {target_code}: {e}")
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -503,23 +600,8 @@ class Ui_MainWindow(object):
         MainWindow.resize(800, 750)
         MainWindow.setMinimumSize(380, 650)
         MainWindow.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        MainWindow.setWindowTitle("Modern Translation App")
-        
-        # --- Backend State ---
-        self.signals = Signals()
-        self.pending_translations = 0
-        self.translations = {}
-        self.audio_files_map = {}
-        self.channel_assignments = {} # Maps target_code to a device_id
+        MainWindow.setWindowTitle("Modern Translation App") # This was already present
 
-        # Find and map audio devices by name
-        find_all_output_devices()
-
-        # Connect signals
-        self.signals.transcription_ready.connect(self.on_transcription_ready)
-        self.signals.translation_ready.connect(self.on_translation_ready)
-        self.signals.tts_ready.connect(self.on_tts_ready)
-        
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         MainWindow.setCentralWidget(self.centralwidget)
@@ -538,7 +620,7 @@ class Ui_MainWindow(object):
         # --- Title ---
         title_label = QLabel("Multi-Language Translator")
         title_label.setAlignment(Qt.AlignCenter)
-        title_label.setFont(QFont("Arial", 24, QFont.Bold))
+        title_label.setFont(QFont("Arial", 24, QFont.Weight.Bold))
         title_label.setStyleSheet("""
             QLabel {
                 color: #1976D2;
@@ -579,7 +661,7 @@ class Ui_MainWindow(object):
 
         # --- Target Language Selection ---
         target_lang_label = QLabel("Translate To:")
-        target_lang_label.setFont(QFont("Arial", 14, QFont.Bold))
+        target_lang_label.setFont(QFont("Arial", 14, QFont.Weight.Bold))
         target_lang_label.setStyleSheet("background: transparent; color: #333;")
         main_layout.addWidget(target_lang_label)
 
@@ -602,7 +684,7 @@ class Ui_MainWindow(object):
         
         # --- Status Label ---
         self.status_label = QLabel("Ready")
-        self.status_label.setAlignment(Qt.AlignCenter)
+        self.status_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.status_label.setStyleSheet("background: transparent; color: #444; font-style: italic;")
         main_layout.addWidget(self.status_label)
         self.signals.set_status.connect(self.status_label.setText)
@@ -614,7 +696,7 @@ class Ui_MainWindow(object):
         # Add a status label for when no languages are selected
         self.no_cards_label = QLabel("Select one or more languages to see translations.")
         self.no_cards_label.setAlignment(Qt.AlignCenter)
-        self.no_cards_label.setStyleSheet("background: transparent; color: #666; font-style: italic;")
+        self.no_cards_label.setStyleSheet("background: transparent; color: #666; font-style: italic;") # This was already present
         """Create the main translation area with cards"""
         self.translation_area_widget = QWidget() # A container for the cards
         self.translation_layout = QGridLayout()
@@ -663,35 +745,39 @@ class Ui_MainWindow(object):
             card = self.translation_cards.get(button.text) # Use clean name
             if card and button.is_selected:
                 card.show()
-                card.show_device_selector()  # Show device selector when card is visible
+                # Device selector is always visible by default
+                # Users can now select their preferred device from the dropdown
+                
                 # Re-add to layout to manage position
                 row, col = visible_card_count // 2, visible_card_count % 2
                 self.translation_layout.addWidget(card, row, col)
                 visible_card_count += 1
             elif card:
                 card.hide()
-                card.hide_device_selector()  # Hide device selector when card is hidden
+                # Don't hide device selector or clear channel indicator - keep them for when card is shown again
 
     def toggleRecording(self):
         is_recording = self.mic_button.isChecked()
         self.mic_button.setRecording(is_recording)
         if is_recording:
             # Clear previous state
-            self.recorded_text_field.clear()
+            self.recorded_text_field.setPlainText("")
             self.translations.clear()
             self.audio_files_map.clear()
             for card in self.translation_cards.values():
                 card.text_area.clear()
-                card.clear_channel_indicator()
                 card.play_button.setEnabled(False)
-                card.hide_device_selector()
+                # Keep device selector and channel indicator visible
             
+            self.stop_recording_event = threading.Event() # This was already present
             # Start recording in a background thread
-            threading.Thread(target=do_record_with_vad, args=(self.signals,), daemon=True).start()
+            threading.Thread(target=do_record, args=(self.stop_recording_event, self.signals), daemon=True).start()
         else:
-            # This part is now handled by the recording thread stopping
-            self.signals.set_status.emit("Recording stopped manually.")
-
+            # Signal the recording thread to stop
+            if self.stop_recording_event:
+                self.stop_recording_event.set()
+            # The recording thread will emit "Recording stopped, processing..."
+            
     def on_transcription_ready(self, text):
         """Handle transcribed text from the worker."""
         self.mic_button.setRecording(False) # Stop animation
@@ -701,7 +787,7 @@ class Ui_MainWindow(object):
             self.signals.set_status.emit("Could not understand audio. Please try again.")
             return
 
-        selected_langs = {name: code for name, code in TARGET_LANGS.items() if self.translation_cards[name].isVisible()}
+        selected_langs = {name: code for name, code in TARGET_LANGS.items() if self.translation_cards[name].isVisible()} # This was already present
         self.pending_translations = len(selected_langs)
 
         if self.pending_translations == 0:
@@ -717,7 +803,7 @@ class Ui_MainWindow(object):
         self.translations[target_code] = translated_text
         
         # Find the card and update it
-        for name, code in TARGET_LANGS.items():
+        for name, code in TARGET_LANGS.items(): # This was already present
             if code == target_code:
                 card = self.translation_cards.get(name)
                 if card:
@@ -735,12 +821,9 @@ class Ui_MainWindow(object):
 
         self.audio_files_map[target_code] = audio_file
 
-        # --- Get device assignment from UI ---
-        # The device will be determined when the user selects it from the dropdown
-
         for name, code in TARGET_LANGS.items():
             if code == target_code:
-                card = self.translation_cards.get(name)
+                card = self.translation_cards.get(name) # This was already present
                 if card:
                     card.play_button.setEnabled(True)
                     # Disconnect previous signals to prevent multiple plays
@@ -748,19 +831,10 @@ class Ui_MainWindow(object):
                         card.play_button.clicked.disconnect()
                     except TypeError: # No signals connected
                         pass
-                    # Show device selector and update channel indicator
-                    card.show_device_selector()
-                    selected_device = card.get_selected_device()
-                    if selected_device and selected_device != "default":
-                        try:
-                            channel_num = discovered_audio_device_ids.index(selected_device) + 1
-                            card.set_channel_indicator(channel_num)
-                        except ValueError:
-                            # Device not found in list, use default
-                            card.clear_channel_indicator()
-                    card.play_button.clicked.connect(lambda _, tc=target_code: self.play_translation(tc))
                     
+                    card.play_button.clicked.connect(lambda _, tc=target_code: self.play_translation(tc))
                     # --- AUTOPLAY ---
+                    # Removed QTimer.singleShot delays. sd.wait() in play_audio_on_device should handle sequential playback.
                     self.play_translation(target_code)
                 break
 
@@ -770,30 +844,48 @@ class Ui_MainWindow(object):
 
 
     def play_translation(self, target_code):
-        """Plays the audio for a given language on its selected device."""
+        """Plays the audio for a given language on the device selected in the dropdown."""
         audio_file = self.audio_files_map.get(target_code)
         
-        # Get the selected device from the UI
-        device_name = None
+        if not audio_file or not os.path.exists(audio_file):
+            print(f"Audio file not found for {target_code}")
+            return
+        
+        # Get the device selection from the dropdown for this language
+        device_index = None # This was already present
+        device_name = "Default"
+        
+        # Find the translation card for this language
         for name, code in TARGET_LANGS.items():
             if code == target_code:
                 card = self.translation_cards.get(name)
                 if card:
-                    device_name = card.get_selected_device()
-                    break
-
-        if audio_file and os.path.exists(audio_file):
-            if device_name == "default":
-                device_name = None  # Use default system device
-            self.status_label.setText(f"Playing {target_code} on device: {device_name or 'Default'}...")
-            # Run playback in a thread to not freeze the UI
-            threading.Thread(target=play_audio_on_device, args=(audio_file, device_name), daemon=True).start()
+                    selected_device = card.get_selected_device()
+                    if selected_device == "default":
+                        device_index = None
+                        device_name = "Default"
+                    else:
+                        device_index = int(selected_device)
+                        # Find the device name for display
+                        for device in discovered_audio_devices:
+                            if device['index'] == device_index:
+                                device_name = device['name']
+                                break
+                break
+        
+        self.status_label.setText(f"Playing {target_code} on {device_name}...")
+        print(f"DEBUG: Playing {target_code} on device {device_index} ({device_name})")
+        # Run playback in a thread to not freeze the UI
+        threading.Thread(target=play_audio_on_device, args=(audio_file, device_index, target_code), daemon=True).start()
 
 
 if __name__ == "__main__":
+    # List available audio devices in the terminal at startup
+    list_audio_devices()
     app = QApplication(sys.argv)
     MainWindow = QMainWindow()
     ui = Ui_MainWindow()
+    ui.signals = Signals()  # Initialize signals
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
